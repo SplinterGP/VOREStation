@@ -1,9 +1,19 @@
-//Zlevel where overmap objects should be
-#define OVERMAP_ZLEVEL 1
 //How far from the edge of overmap zlevel could randomly placed objects spawn
 #define OVERMAP_EDGE 7
 
+#define SHIP_SIZE_TINY	1
+#define SHIP_SIZE_SMALL	2
+#define SHIP_SIZE_LARGE	3
 
+//multipliers for max_speed to find 'slow' and 'fast' speeds for the ship
+#define SHIP_SPEED_SLOW  1/(40 SECONDS)
+#define SHIP_SPEED_FAST  3/(20 SECONDS)// 15 speed
+
+#define OVERMAP_WEAKNESS_NONE		0
+#define OVERMAP_WEAKNESS_FIRE		1
+#define OVERMAP_WEAKNESS_EMP		2
+#define OVERMAP_WEAKNESS_MINING		4
+#define OVERMAP_WEAKNESS_EXPLOSIVE	8
 
 //Dimension of overmap (squares 4 lyfe)
 var/global/list/map_sectors = list()
@@ -71,21 +81,20 @@ proc/toggle_move_stars(zlevel, direction)
 	if(!direction)
 		gen_dir = null
 
-	if (moving_levels["zlevel"] != gen_dir)
-		moving_levels["zlevel"] = gen_dir
-		for(var/x = 1 to world.maxx)
-			for(var/y = 1 to world.maxy)
-				var/turf/space/T = locate(x,y,zlevel)
-				if (istype(T))
-					if(!gen_dir)
-						T.icon_state = "[((T.x + T.y) ^ ~(T.x * T.y) + T.z) % 25]"
-					else
-						T.icon_state = "speedspace_[gen_dir]_[rand(1,15)]"
-						for(var/atom/movable/AM in T)
-							if (!AM.anchored)
-								AM.throw_at(get_step(T,reverse_direction(direction)), 5, 1)
+	if (moving_levels["[zlevel]"] != gen_dir)
+		moving_levels["[zlevel]"] = gen_dir
 
-
+		var/list/spaceturfs = block(locate(1, 1, zlevel), locate(world.maxx, world.maxy, zlevel))
+		for(var/turf/space/T in spaceturfs)
+			if(!gen_dir)
+				T.icon_state = initial(T.icon_state)
+			else
+				T.icon_state = "speedspace_[gen_dir]_[rand(1,15)]"
+				for(var/atom/movable/AM in T)
+					if (AM.simulated && !AM.anchored)
+						AM.throw_at(get_step(T,reverse_direction(direction)), 5, 1)
+						CHECK_TICK
+			CHECK_TICK
 /*
 //list used to cache empty zlevels to avoid nedless map bloat
 var/list/cached_space = list()

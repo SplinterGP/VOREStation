@@ -1,4 +1,7 @@
 /*
+**
+** HELLO! DON'T COPY THINGS FROM HERE - READ THIS!
+**
 ** The ship machines/computers ported from baystation expect certain procs and infrastruture that we don't have.
 ** I /could/ just port those computers to our code, but I actually *like* that infrastructure. But I
 ** don't have time (yet) to implement it fully in our codebase, so I'm shimming it here experimentally as a test
@@ -8,7 +11,6 @@
 //
 // Power
 //
-
 
 // This will have this machine have its area eat this much power next tick, and not afterwards. Do not use for continued power draw.
 /obj/machinery/proc/use_power_oneoff(var/amount, var/chan = -1)
@@ -52,33 +54,51 @@
 //
 /obj/machinery/computer/ship
 	var/core_skill = /datum/skill/devices //The skill used for skill checks for this machine (mostly so subtypes can use different skills).
-	// var/operator_skill      // Machines often do all operations on Process(). This caches the user's skill while the operations are running.
-
 
 //
 // Topic
 //
 
-/obj/machinery/computer/engines/attack_hand(var/mob/user as mob)
-	if(..())
-		user.unset_machine()
+/obj/machinery/computer/ship/proc/DefaultTopicState()
+	return global.default_state
+
+/obj/machinery/computer/ship/Topic(var/href, var/href_list = list(), var/datum/topic_state/state)
+	if((. = ..()))
 		return
+	state = state || DefaultTopicState() || global.default_state
+	if(CanUseTopic(usr, state, href_list) == STATUS_INTERACTIVE)
+		CouldUseTopic(usr)
+		return OnTopic(usr, href_list, state)
+	CouldNotUseTopic(usr)
+	return TRUE
 
-	if(!isAI(user))
-		user.set_machine(src)
+/obj/machinery/computer/ship/proc/OnTopic(var/mob/user, var/href_list, var/datum/topic_state/state)
+	return TOPIC_NOACTION
 
+//
+// Interaction
+//
+
+// If you want to have interface interactions handled for you conveniently, use this.
+// Return TRUE for handled.
+// If you perform direct interactions in here, you are responsible for ensuring that full interactivity checks have been made (i.e CanInteract).
+// The checks leading in to here only guarantee that the user should be able to view a UI.
+/obj/machinery/computer/ship/proc/interface_interact(var/mob/user)
 	ui_interact(user)
+	return TRUE
 
+/obj/machinery/computer/ship/attack_ai(mob/user)
+	if(CanUseTopic(user, DefaultTopicState()) > STATUS_CLOSE)
+		return interface_interact(user)
 
+// After a recent rework this should mostly be safe.
+/obj/machinery/computer/ship/attack_ghost(mob/user)
+	interface_interact(user)
 
-// NON COMPUTER STUFF - FIND A HOME
-
-
-/obj/item/weapon/tank/hydrogen
-	name = "hydrogen tank"
-	desc = "A tank of hydrogen."
-	icon_state = "hydrogen"  // TODO - Leshana - COPY THIS
-
-/obj/item/weapon/tank/hydrogen/Initialize()
-	. = ..()
-	air_contents.adjust_gas("hydrogen", (8*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
+// If you don't call parent in this proc, you must make all appropriate checks yourself. 
+// If you do, you must respect the return value.
+/obj/machinery/computer/ship/attack_hand(mob/user)
+	if((. = ..()))
+		return
+	if(CanUseTopic(user, DefaultTopicState()) > STATUS_CLOSE)
+		return interface_interact(user)

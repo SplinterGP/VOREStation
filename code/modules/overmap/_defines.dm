@@ -27,6 +27,7 @@ var/global/list/map_sectors = list()
 /turf/unsimulated/map
 	icon = 'icons/turf/space.dmi'
 	icon_state = "map"
+	initialized = FALSE // TODO - Fix unsimulated turf initialization so this override is not necessary!
 
 /turf/unsimulated/map/edge
 	opacity = 1
@@ -58,11 +59,7 @@ var/global/list/map_sectors = list()
 			I.pixel_x = 5*i - 2
 		if(x == global.using_map.overmap_size)
 			I.pixel_x = 5*i + 2
-		overlays += I
-
-
-
-
+		add_overlay(I)
 
 //list used to track which zlevels are being 'moved' by the proc below
 var/list/moving_levels = list()

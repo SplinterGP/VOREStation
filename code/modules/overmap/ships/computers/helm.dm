@@ -95,7 +95,7 @@ GLOBAL_LIST_EMPTY(all_waypoints)
 		data["d_y"] = dy
 		data["speedlimit"] = speedlimit ? speedlimit*1000 : "Halted"
 		data["accel"] = min(round(linked.get_acceleration()*1000, 0.01),accellimit*1000)
-		data["heading"] = linked.get_heading() ? dir2angle(linked.get_heading()) : 0
+		data["heading"] = linked.get_heading_degrees()
 		data["autopilot"] = autopilot
 		data["manual_control"] = viewing_overmap(user)
 		data["canburn"] = linked.can_burn()
@@ -243,7 +243,7 @@ GLOBAL_LIST_EMPTY(all_waypoints)
 	data["s_y"] = linked.y
 	data["speed"] = round(linked.get_speed()*1000, 0.01)
 	data["accel"] = round(linked.get_acceleration()*1000, 0.01)
-	data["heading"] = linked.get_heading() ? dir2angle(linked.get_heading()) : 0
+	data["heading"] = linked.get_heading_degrees()
 	data["viewing"] = viewing_overmap(user)
 
 	if(linked.get_speed())

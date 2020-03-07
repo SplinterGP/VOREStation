@@ -55,7 +55,7 @@
 /obj/effect/overmap/visitable/ship/get_scan_data(mob/user)
 	. = ..()
 	if(!is_still())
-		. += "<br>Heading: [dir2angle(get_heading())], speed [get_speed() * 1000]"
+		. += "<br>Heading: [get_heading_degrees()], speed [get_speed() * 1000]"
 
 //Projected acceleration based on information from engines
 /obj/effect/overmap/visitable/ship/proc/get_acceleration()
@@ -73,6 +73,7 @@
 /obj/effect/overmap/visitable/ship/proc/get_speed()
 	return round(sqrt(speed[1] ** 2 + speed[2] ** 2), SHIP_MOVE_RESOLUTION)
 
+// Get heading in BYOND dir bits
 /obj/effect/overmap/visitable/ship/proc/get_heading()
 	var/res = 0
 	if(MOVING(speed[1]))
@@ -86,6 +87,10 @@
 		else
 			res |= SOUTH
 	return res
+
+// Get heading in degrees (like a compass heading)
+/obj/effect/overmap/visitable/ship/proc/get_heading_degrees()
+	return (ATAN2(speed[2], speed[1]) + 360) % 360 // Yes ATAN2(y, x) is correct to get clockwise degrees
 
 /obj/effect/overmap/visitable/ship/proc/adjust_speed(n_x, n_y)
 	CHANGE_SPEED_BY(speed[1], n_x)

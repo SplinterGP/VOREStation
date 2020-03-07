@@ -271,6 +271,8 @@ GLOBAL_LIST_EMPTY(all_waypoints)
 
 /obj/machinery/computer/ship/navigation/telescreen	//little hacky but it's only used on one ship so it should be okay
 	icon_state = "tele_nav"
+	icon_keyboard = null
+	icon_screen = null
 	density = 0
 
 /obj/machinery/computer/ship/navigation/telescreen/update_icon()

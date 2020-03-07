@@ -3297,6 +3297,9 @@
 	layer = 3.1;
 	pixel_x = -28
 	},
+/obj/machinery/computer/ship/navigation{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/overmapdemo)
 "jc" = (
@@ -3313,10 +3316,15 @@
 /turf/space,
 /area/space)
 "lY" = (
+/obj/machinery/computer/ship/sensors{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/overmapdemo)
 "mi" = (
-/obj/structure/shuttle/engine/propulsion,
+/obj/machinery/ion_engine{
+	dir = 1
+	},
 /turf/space,
 /turf/simulated/shuttle/plating/carry,
 /area/shuttle/overmapdemo)
@@ -3327,7 +3335,7 @@
 	id_tag = "overmapdemo_docker_hatch";
 	locked = 1
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/overmapdemo)
 "tm" = (
 /obj/machinery/computer/shuttle_control/explore{
@@ -3340,16 +3348,17 @@
 /turf/simulated/shuttle/wall/voidcraft/green,
 /area/shuttle/overmapdemo)
 "FX" = (
-/obj/structure/shuttle/window,
+/obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/shuttle/floor/voidcraft/external/light,
 /area/shuttle/overmapdemo)
 "Lw" = (
-/obj/structure/table/reinforced,
+/obj/machinery/computer/ship/helm,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/overmapdemo)
 "LG" = (
-/obj/structure/bed/chair{
-	dir = 1
+/obj/machinery/computer/ship/engines{
+	dir = 8;
+	throwpass = 1
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/overmapdemo)
@@ -3362,6 +3371,7 @@
 	dir = 1
 	},
 /obj/effect/shuttle_landmark/station_dockpoint2,
+/obj/effect/overmap/visitable/ship/landable/overmapdemo,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/overmapdemo)
 "Wa" = (
@@ -3373,9 +3383,8 @@
 /turf/simulated/floor/tiled,
 /area/bridge)
 "WQ" = (
-/obj/structure/shuttle/engine/heater,
-/turf/space,
-/turf/simulated/shuttle/plating/carry,
+/obj/machinery/shipsensors,
+/turf/simulated/shuttle/floor/voidcraft/external/light,
 /area/shuttle/overmapdemo)
 
 (1,1,1) = {"

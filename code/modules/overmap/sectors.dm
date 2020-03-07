@@ -119,7 +119,7 @@
 		return 1
 
 	testing("Building overmap...")
-	world.maxz++
+	world.increment_max_z()
 	global.using_map.overmap_z = world.maxz
 
 	testing("Putting overmap on [global.using_map.overmap_z]")

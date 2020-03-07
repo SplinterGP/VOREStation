@@ -37,3 +37,14 @@
 	music = "music/escape.ogg"
 	icon_state = "shuttle"
 
+
+//
+// Making Overmap Shuttle into a Landable Ship
+//
+
+/obj/effect/overmap/visitable/ship/landable/overmapdemo
+	name = "VSS Overmap Demo"
+	desc = "Small little shuttle nonetheless capable of overmap travel!"
+	vessel_mass = 5000
+	vessel_size = SHIP_SIZE_SMALL
+	shuttle = "Overmap-Demo"

@@ -55,7 +55,7 @@
 /obj/machinery/atmospherics/unary/engine
 	name = "rocket nozzle"
 	desc = "Simple rocket nozzle, expelling gas at hypersonic velocities to propell the ship."
-	icon = 'icons/obj/ship_engine.dmi'
+	icon = 'icons/turf/shuttle_parts.dmi'
 	icon_state = "nozzle"
 	opacity = 1
 	density = 1
@@ -196,7 +196,7 @@
 	if(flame)
 		icon_state = "exhaust"
 		nloc.hotspot_expose(1000,125)
-		set_light(0.5, 1, 4)
+		set_light(0.5, 3)
 	set_dir(ndir)
 	QDEL_IN(src, 20)
 

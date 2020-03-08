@@ -2208,12 +2208,12 @@
 /area/shuttle/excursion)
 "dD" = (
 /obj/machinery/button/remote/blast_door{
-	dir = 8;
-	id = "shuttle blast";
 	name = "Shuttle Blast Doors";
-	pixel_x = 26;
-	pixel_y = 39;
-	req_access = list(67)
+	dir = 8;
+	pixel_x = -25;
+	pixel_y = -21;
+	req_access = list(67);
+	id = "shuttle blast"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -2235,10 +2235,10 @@
 	dir = 8
 	},
 /obj/machinery/light_switch{
-	dir = 2;
 	name = "light switch ";
-	pixel_x = 6;
-	pixel_y = 32
+	dir = 2;
+	pixel_x = 23;
+	pixel_y = 7
 	},
 /obj/machinery/light{
 	dir = 4
@@ -6978,6 +6978,7 @@
 	landmark_tag = "tether_excursion_hangar";
 	name = "Excursion Shuttle Dock"
 	},
+/obj/effect/overmap/visitable/ship/landable/excursion,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/excursion)
 "kS" = (
@@ -7746,15 +7747,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
-"lY" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/space;
-	base_turf = /turf/space;
-	landmark_tag = "antag_space_nearby";
-	name = "Space near Tether"
-	},
-/turf/space,
-/area/space)
 "lZ" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green,
@@ -17008,7 +17000,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "An" = (
-/obj/structure/shuttle/engine/propulsion,
+/obj/machinery/ion_engine,
 /turf/simulated/floor/reinforced,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/excursion)
@@ -29645,7 +29637,7 @@
 /turf/simulated/floor/airless,
 /area/shuttle/belter)
 "Vu" = (
-/obj/structure/flight_left,
+/obj/machinery/computer/ship/helm,
 /turf/simulated/floor/tiled,
 /area/shuttle/excursion)
 "Vv" = (
@@ -29940,6 +29932,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/wall/rshull,
 /area/shuttle/excursion)
+"Wt" = (
+/obj/machinery/computer/ship/engines{
+	icon_state = "computer";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/excursion)
 "Wv" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -29985,7 +29984,7 @@
 /turf/simulated/floor/tiled/white,
 /area/security/security_bathroom)
 "WD" = (
-/obj/structure/flight_right,
+/obj/machinery/computer/ship/sensors,
 /turf/simulated/floor/tiled,
 /area/shuttle/excursion)
 "WE" = (
@@ -30022,6 +30021,11 @@
 /obj/structure/dogbed,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/hos)
+"WL" = (
+/obj/machinery/shipsensors,
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/reinforced,
+/area/shuttle/excursion)
 "WN" = (
 /obj/effect/floor_decal/carpet{
 	dir = 4
@@ -30225,6 +30229,10 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/quartermaster/warehouse)
+"XR" = (
+/obj/effect/overmap/visitable/sector/virgo3b,
+/turf/space,
+/area/space)
 "XT" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -30248,10 +30256,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/station/upper)
 "XZ" = (
-/obj/machinery/computer/shuttle_control/web/excursion{
-	icon = 'icons/obj/computer.dmi';
-	my_doors = list("expshuttle_door_Ro" = "Airlock Outer", "expshuttle_door_Ri" = "Airlock Inner", "expshuttle_door_cargo" = "Cargo Hatch");
-	my_sensors = list("shuttlesens_exp" = "Exterior Environment", "shuttlesens_exp_int" = "Cargo Area", "shuttlesens_exp_psg" = "Passenger Area")
+/obj/machinery/computer/shuttle_control/explore{
+	shuttle_tag = "Excursion Shuttle"
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/excursion)
@@ -30344,6 +30350,15 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/crew_quarters/medical_restroom)
+"YB" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/space;
+	base_turf = /turf/space;
+	landmark_tag = "tether_space_SE";
+	name = "Near Tether (SE)"
+	},
+/turf/space,
+/area/space)
 "YC" = (
 /obj/effect/floor_decal/carpet,
 /turf/simulated/floor/carpet,
@@ -30894,7 +30909,7 @@ aa
 aa
 aa
 aa
-aa
+XR
 aa
 "}
 (3,1,1) = {"
@@ -33142,7 +33157,7 @@ aa
 aa
 aa
 aa
-aa
+YB
 aa
 aa
 aa
@@ -41579,7 +41594,7 @@ be
 bX
 cE
 cK
-cK
+WL
 dj
 Tl
 ZU
@@ -41732,7 +41747,7 @@ Um
 dj
 iK
 jY
-iW
+Wt
 WS
 dj
 XN
@@ -46718,7 +46733,7 @@ aa
 aa
 aa
 aa
-lY
+aa
 aa
 aa
 aa

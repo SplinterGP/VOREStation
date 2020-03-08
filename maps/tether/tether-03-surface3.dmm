@@ -30452,6 +30452,7 @@
 /obj/item/device/flashlight/lamp/green{
 	pixel_x = -10
 	},
+/obj/item/weapon/paper/dockingcodes,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/hop)
 "aZc" = (
@@ -30881,6 +30882,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
+/obj/item/weapon/paper/dockingcodes,
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "aZV" = (

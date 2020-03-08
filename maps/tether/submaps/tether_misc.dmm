@@ -4186,9 +4186,11 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade)
 "ko" = (
-/obj/structure/table/steel_reinforced,
 /obj/machinery/newscaster{
 	pixel_x = 32
+	},
+/obj/machinery/computer/arcade/battle{
+	dir = 4
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade)
@@ -4406,6 +4408,7 @@
 /area/shuttle/trade)
 "kN" = (
 /obj/machinery/computer/shuttle_control{
+	dir = 4;
 	name = "Beruang control console";
 	req_access = list(160);
 	shuttle_tag = "Trade"
@@ -4489,7 +4492,7 @@
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/trade)
 "kZ" = (
-/obj/machinery/computer/arcade/battle,
+/obj/structure/table/steel_reinforced,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade)
 "la" = (
@@ -7845,13 +7848,6 @@
 	locked = 1;
 	name = "Shuttle Hatch"
 	},
-/obj/effect/shuttle_landmark{
-	base_area = /area/antag/antag_base;
-	base_turf = /turf/unsimulated/floor/steel;
-	docking_controller = "antag_space_dock";
-	landmark_tag = "antag_space_base";
-	name = "Home Base"
-	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/antag_space{
 	base_turf = /turf/unsimulated/floor/techfloor_grid
@@ -10869,6 +10865,12 @@
 	pixel_x = 0;
 	pixel_y = 28
 	},
+/obj/effect/shuttle_landmark{
+	base_area = /area/ninja_dojo/dojo;
+	base_turf = /turf/unsimulated/floor;
+	landmark_tag = "ninja_base";
+	name = "The Dojo"
+	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/ninja)
 "Dd" = (
@@ -11445,6 +11447,13 @@
 	id_tag = "vox_east_sensor";
 	pixel_x = -25
 	},
+/obj/effect/shuttle_landmark{
+	base_area = /area/space;
+	base_turf = /turf/space;
+	docking_controller = null;
+	landmark_tag = "skipjack_base";
+	name = "The Hideaway"
+	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
 "IW" = (
@@ -11766,12 +11775,6 @@
 	},
 /area/skipjack_station)
 "Ml" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/ninja_dojo/dojo;
-	base_turf = /turf/unsimulated/floor;
-	landmark_tag = "ninja_base";
-	name = "The Dojo"
-	},
 /turf/simulated/shuttle/wall/voidcraft/blue,
 /area/shuttle/ninja)
 "Mq" = (
@@ -11932,26 +11935,6 @@
 	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/white,
-/area/shuttle/skipjack)
-"Oj" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/door/blast/regular{
-	id = "skipjackshutters";
-	name = "Skipjack Blast Shielding"
-	},
-/obj/structure/window/reinforced/full,
-/obj/effect/shuttle_landmark{
-	base_area = /area/space;
-	base_turf = /turf/space;
-	docking_controller = null;
-	landmark_tag = "skipjack_base";
-	name = "The Hideaway"
-	},
-/turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
 "Oo" = (
 /obj/structure/shuttle/engine/propulsion,
@@ -12808,6 +12791,25 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/shuttle/plating,
 /area/shuttle/ninja)
+"YU" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 32;
+	pixel_y = 0
+	},
+/obj/effect/shuttle_landmark{
+	base_area = /area/antag/antag_base;
+	base_turf = /turf/unsimulated/floor/steel;
+	docking_controller = "antag_space_dock";
+	landmark_tag = "antag_space_base";
+	name = "Home Base"
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/antag_space{
+	base_turf = /turf/unsimulated/floor/techfloor_grid
+	})
 "YX" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -15728,7 +15730,7 @@ zv
 ap
 ap
 ap
-Oj
+Qb
 Ge
 OH
 ZA
@@ -32325,7 +32327,7 @@ dz
 iu
 iu
 qe
-qe
+YU
 iu
 iH
 qJ

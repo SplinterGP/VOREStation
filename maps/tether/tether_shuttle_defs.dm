@@ -8,9 +8,6 @@
 	landmark_offsite = "escape_cc"
 	landmark_station = "escape_station"
 	landmark_transition = "escape_transit"
-	//docking_controller_tag = "escape_shuttle"
-	//dock_target_station = "escape_dock"
-	//dock_target_offsite = "centcom_dock"
 	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
 
 //////////////////////////////////////////////////////////////
@@ -23,8 +20,6 @@
 	landmark_offsite = "escapepod1_cc"
 	landmark_transition = "escapepod1_transit"
 	docking_controller_tag = "large_escape_pod_1"
-	//dock_target_station = "large_escape_pod_1_berth"
-	//dock_target_offsite = "large_escape_pod_1_recovery"
 	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
 
 //////////////////////////////////////////////////////////////
@@ -37,7 +32,6 @@
 	landmark_offsite = "supply_cc"
 	landmark_station = "supply_station"
 	docking_controller_tag = "supply_shuttle"
-	//dock_target_station = "cargo_bay"
 	flags = SHUTTLE_FLAGS_PROCESS|SHUTTLE_FLAGS_SUPPLY
 
 //////////////////////////////////////////////////////////////
@@ -48,10 +42,8 @@
 	shuttle_area = /area/shuttle/trade
 	warmup_time = 10	//want some warmup time so people can cancel.
 	landmark_offsite = "trade_cc"
-	landmark_station = "trade_station"
+	landmark_station = "tether_dockarm_d1l"
 	docking_controller_tag = "trade_shuttle"
-	//dock_target_station = "trade_shuttle_dock_airlock"
-	//dock_target_offsite = "trade_shuttle_bay"
 
 //////////////////////////////////////////////////////////////
 // Tether Shuttle
@@ -61,13 +53,11 @@
 	warmup_time = 5
 	move_time = 45
 	landmark_offsite = "tether_backup_low"
-	landmark_station = "tether_backup_high"
+	landmark_station = "tether_dockarm_d1a3"
 	landmark_transition = "tether_backup_transit"
 	shuttle_area = /area/shuttle/tether
 	//crash_areas = list(/area/shuttle/tether/crash1, /area/shuttle/tether/crash2)
 	docking_controller_tag = "tether_shuttle"
-	//dock_target_station = "tether_dock_airlock"
-	//dock_target_offsite = "tether_pad_airlock"
 
 //////////////////////////////////////////////////////////////
 // Antag Space "Proto Shuttle" Shuttle
@@ -79,13 +69,12 @@
 	shuttle_area = /area/shuttle/antag_space
 	landmark_transition = "antag_space_transit"
 	destination_tags = list(
-		"antag_space_nearby",
-		"antag_space_docks"
-		//"Nearby" = /area/shuttle/antag_space/north,
-		//"Docks" =  /area/shuttle/antag_space/docks
+		"tether_space_NE",
+		"tether_space_SE",
+		"tether_space_SW",
+		"tether_dockarm_d2a1"
 	)
 	docking_controller_tag = "antag_space_shuttle"
-	//destination_dock_targets = list("Home Base" = "antag_space_dock")
 
 //////////////////////////////////////////////////////////////
 // Antag Surface "Land Crawler" Shuttle
@@ -99,8 +88,6 @@
 	destination_tags = list(
 		"antag_ground_solars",
 		"antag_ground_mining"
-		//"Solar Array" = /area/shuttle/antag_ground/solars,
-		//"Mining Outpost" =  /area/shuttle/antag_ground/mining
 	)
 	docking_controller_tag = "antag_ground_shuttle"
 
@@ -115,7 +102,10 @@
 	destination_tags = list(
 		"merc_base",
 		"merc_tether_solars",
-		"merc_tether_dock"
+		"tether_space_NE",
+		"tether_space_SE",
+		"tether_space_SW",
+		"tether_dockarm_d2l"
 		)
 	docking_controller_tag = "merc_shuttle"
 	announcer = "Automated Traffic Control"
@@ -138,8 +128,6 @@
 	landmark_offsite = "belter_zone1"
 	landmark_transition = "belter_transit"
 	docking_controller_tag = "belter_docking"
-	//dock_target_station = "belter_nodocking" //Fake tags to prevent the shuttle from opening doors.
-	//dock_target_offsite = "belter_nodocking"
 
 /datum/shuttle/autodock/ferry/belter/New()
 	move_time = move_time + rand(-5 SECONDS, 5 SECONDS)

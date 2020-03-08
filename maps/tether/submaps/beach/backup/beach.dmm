@@ -331,7 +331,7 @@
 /turf/simulated/floor/beach/sand,
 /area/tether_away/beach/jungle)
 "bs" = (
-/obj/effect/overmap/visitable/sector/virgo4,
+/obj/shuttle_connector/beach,
 /obj/effect/step_trigger/zlevel_fall/beach,
 /turf/simulated/floor/beach/sand/desert,
 /area/tether_away/beach/jungle)

@@ -168,116 +168,32 @@
 ////////////////////////////////////////
 //////// Excursion Shuttle /////////////
 ////////////////////////////////////////
-/obj/machinery/computer/shuttle_control/web/excursion
-	name = "shuttle control console"
-	shuttle_tag = "Excursion Shuttle"
-	req_access = list()
-	req_one_access = list(access_pilot)
-	var/wait_time = 45 MINUTES
+/obj/effect/overmap/visitable/sector/virgo3b
+	name = "Virgo 3B"
+	desc = "Full of phoron, and home to the NSB Adephagia, where you can dock and refuel your craft."
+	base = 1
+	start_x = 10
+	start_y = 10
+	icon_state = "globe"
+	color = "#d35b5b"
+	initial_generic_waypoints = list("tether_dockarm_d1a1","tether_dockarm_d1a2","tether_dockarm_d1a3","tether_dockarm_d2a1","tether_dockarm_d2a2","tether_dockarm_d1l","tether_dockarm_d2l")
 
-/obj/machinery/computer/shuttle_control/web/excursion/ui_interact()
-	if(world.time < wait_time)
-		to_chat(usr,"<span class='warning'>The console is locked while the shuttle refuels. It will be complete in [round((wait_time - world.time)/10/60)] minute\s.</span>")
-		return FALSE
-
-	. = ..()
-
-/datum/shuttle/autodock/web_shuttle/excursion
+// The 'shuttle' of the excursion shuttle
+/datum/shuttle/autodock/overmap/excursion
 	name = "Excursion Shuttle"
 	warmup_time = 0
 	current_location = "tether_excursion_hangar"
 	docking_controller_tag = "expshuttle_docker"
-	web_master_type = /datum/shuttle_web_master/excursion
 	shuttle_area = /area/shuttle/excursion
-	var/abduct_chance = 0 //Prob
+	fuel_consumption = 0 //WIP
 
-/datum/shuttle/autodock/web_shuttle/excursion/long_jump(var/obj/effect/shuttle_landmark/destination, var/obj/effect/shuttle_landmark/interim, var/travel_time)
-	if(prob(abduct_chance))
-		abduct_chance = 0
-		var/list/occupants = list()
-		for(var/area/A in shuttle_area)
-			for(var/mob/living/L in A)
-				occupants += key_name(L)
-		log_and_message_admins("Shuttle abduction occuring with (only mobs on turfs): [english_list(occupants)]")
-		//Build the route to the alien ship
-		var/obj/shuttle_connector/alienship/ASC = new /obj/shuttle_connector/alienship(null)
-		ASC.setup_routes()
-
-		//Redirect us onto that route instead
-		var/datum/shuttle/autodock/web_shuttle/WS = shuttle_controller.shuttles[name]
-		var/datum/shuttle_destination/ASD = WS.web_master.get_destination_by_type(/datum/shuttle_destination/excursion/alienship)
-		WS.web_master.future_destination = ASD
-		. = ..(ASD.my_landmark,interim,travel_time)
-	else
-		. = ..()
-
-/datum/shuttle_web_master/excursion
-	destination_class = /datum/shuttle_destination/excursion
-	starting_destination = /datum/shuttle_destination/excursion/tether
-
-/datum/shuttle_destination/excursion/tether
-	name = "NSB Adephagia Excursion Hangar"
-	my_landmark = "tether_excursion_hangar"
-
-	radio_announce = 1
-	announcer = "Excursion Shuttle"
-
-	routes_to_make = list(
-		/datum/shuttle_destination/excursion/outside_tether = 0,
-	)
-
-/datum/shuttle_destination/excursion/tether/get_arrival_message()
-	return "Attention, [master.my_shuttle.visible_name] has arrived at the Excursion Hangar."
-
-/datum/shuttle_destination/excursion/tether/get_departure_message()
-	return "Attention, [master.my_shuttle.visible_name] has departed from the Excursion Hangar."
-
-
-/datum/shuttle_destination/excursion/outside_tether
-	name = "Nearby NSB Adephagia"
-	my_landmark = "tether_excursion_nearby"
-	preferred_interim_tag = "tether_excursion_transit_space"
-
-	routes_to_make = list(
-		/datum/shuttle_destination/excursion/docked_tether = 0,
-		/datum/shuttle_destination/excursion/virgo3b_orbit = 30 SECONDS
-	)
-
-
-/datum/shuttle_destination/excursion/docked_tether
-	name = "NSB Adephagia Docking Arm"
-	my_landmark = "tether_excursion_dockarm"
-
-	radio_announce = 1
-	announcer = "Excursion Shuttle"
-
-/datum/shuttle_destination/excursion/docked_tether/get_arrival_message()
-	return "Attention, [master.my_shuttle.visible_name] has arrived at Docking Arm One."
-
-/datum/shuttle_destination/excursion/docked_tether/get_departure_message()
-	return "Attention, [master.my_shuttle.visible_name] has departed from Docking Arm One."
-
-
-/datum/shuttle_destination/excursion/virgo3b_orbit
-	name = "Virgo 3B Orbit"
-	my_landmark = "tether_excursion_space"
-	preferred_interim_tag = "tether_excursion_transit_space"
-
-	routes_to_make = list(
-		/datum/shuttle_destination/excursion/virgo3b_sky = 30 SECONDS,
-		/datum/shuttle_destination/excursion/bluespace = 30 SECONDS
-	)
-
-
-/datum/shuttle_destination/excursion/virgo3b_sky
-	name = "Skies of Virgo 3B"
-	my_landmark = "tether_excursion_virgo3bsky"
-
-////////// Distant Destinations
-/datum/shuttle_destination/excursion/bluespace
-	name = "Bluespace Jump"
-	my_landmark = "tether_excursion_bluespace"
-	preferred_interim_tag = "tether_excursion_transit_space"
+// The 'ship' of the excursion shuttle
+/obj/effect/overmap/visitable/ship/landable/excursion
+	name = "Excursion Shuttle"
+	desc = "The traditional Excursion Shuttle. NT Approved!"
+	vessel_mass = 5000
+	vessel_size = SHIP_SIZE_SMALL
+	shuttle = "Excursion Shuttle"
 
 // Heist
 /obj/machinery/computer/shuttle_control/web/heist
@@ -313,7 +229,16 @@
 	preferred_interim_tag = "skipjack_transit"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/heist/root = 1 MINUTE
+		/datum/shuttle_destination/heist/root = 1 MINUTE,
+		/datum/shuttle_destination/heist/docked_tether = 0
+	)
+
+/datum/shuttle_destination/heist/docked_tether
+	name = "NSB Adephagia - Dockarm"
+	my_landmark = "tether_dockarm_d1l"
+
+	routes_to_make = list(
+		/datum/shuttle_destination/heist/outside_tether = 0
 	)
 
 // Ninja
@@ -348,12 +273,22 @@
 
 /datum/shuttle_destination/ninja/outside_tether
 	name = "NSB Adephagia - Nearby"
-	my_landmark = "ninja_outside"
+	my_landmark = "tether_space_NE"
 	preferred_interim_tag = "ninja_transit"
 
 	routes_to_make = list(
-		/datum/shuttle_destination/ninja/root = 30 SECONDS
+		/datum/shuttle_destination/ninja/root = 30 SECONDS,
+		/datum/shuttle_destination/ninja/docked_tether = 0
 	)
+
+/datum/shuttle_destination/ninja/docked_tether
+	name = "NSB Adephagia - Dockarm"
+	my_landmark = "tether_dockarm_d1a3"
+
+	routes_to_make = list(
+		/datum/shuttle_destination/ninja/outside_tether = 0
+	)
+
 
 ////////////////////////////////////
 //////// Specops Shuttle ///////////
@@ -382,14 +317,14 @@
 
 /datum/shuttle_destination/specialops/tether
 	name = "NSB Adephagia Docking Arm 2"
-	my_landmark = "specops_tether"
+	my_landmark = "tether_dockarm_d2a2"
 	preferred_interim_tag = "specops_transit"
 
 	radio_announce = 1
 	announcer = "A.L.I.C.E."
 
 	routes_to_make = list(
-		/datum/shuttle_destination/specialops/centcom = 15,
+		/datum/shuttle_destination/specialops/centcom = 15
 	)
 
 /datum/shuttle_destination/specialops/tether/get_arrival_message()

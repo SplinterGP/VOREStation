@@ -1,27 +1,13 @@
 #include "submaps/virgo2.dm"
 
+/obj/effect/overmap/visitable/sector/virgo2
+	name = "Virgo 2"
+	desc = "Includes the Remmi Aerostat and associated ground mining complexes."
+	icon_state = "globe"
+	color = "#dfff3f" //Bright yellow
+	initial_generic_waypoints = list("tether_excursion_aerostat")
+
 // -- Datums -- //
-
-/datum/shuttle_destination/excursion/virgo2orbit
-	name = "Virgo 2 Orbit"
-	my_landmark = "tether_excursion_space"
-	preferred_interim_tag = "tether_excursion_transit_space"
-	skip_me = TRUE
-
-	routes_to_make = list(
-		/datum/shuttle_destination/excursion/bluespace = 30 SECONDS,
-		/datum/shuttle_destination/excursion/virgo2orbit = 30 SECONDS
-	)
-
-/datum/shuttle_destination/excursion/aerostat
-	name = "Remmi Aerostat"
-	my_landmark = "tether_excursion_aerostat"
-	preferred_interim_tag = "tether_excursion_transit_space"
-	skip_me = TRUE
-
-	routes_to_make = list(
-		/datum/shuttle_destination/excursion/virgo2orbit = 30 SECONDS
-	)
 
 /datum/shuttle/autodock/ferry/aerostat
 	name = "Aerostat Ferry"
@@ -43,11 +29,6 @@
 /obj/machinery/computer/shuttle_control/aerostat_shuttle
 	name = "aerostat ferry control console"
 	shuttle_tag = "Aerostat Ferry"
-
-/obj/shuttle_connector/aerostat
-	name = "shuttle connector - aerostat"
-	shuttle_name = "Excursion Shuttle"
-	destinations = list(/datum/shuttle_destination/excursion/virgo2orbit, /datum/shuttle_destination/excursion/aerostat)
 
 /obj/away_mission_init/aerostat/Initialize()
 	/*seed_submaps(list(Z_LEVEL_AEROSTAT_SURFACE), 50, /area/tether_away/aerostat/surface/unexplored, /datum/map_template/virgo2)

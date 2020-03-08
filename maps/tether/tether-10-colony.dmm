@@ -358,6 +358,12 @@
 	pixel_y = -25;
 	tag_door = "specops_shuttle_fore_hatch"
 	},
+/obj/effect/shuttle_landmark{
+	base_area = /area/centcom/specops;
+	base_turf = /turf/unsimulated/floor;
+	landmark_tag = "specops_base";
+	name = "ERT Shuttle Bay"
+	},
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},
@@ -369,12 +375,6 @@
 	id_tag = "specops_shuttle_fore_hatch";
 	locked = 1;
 	name = "Forward Docking Hatch"
-	},
-/obj/effect/shuttle_landmark{
-	base_area = /area/centcom/specops;
-	base_turf = /turf/unsimulated/floor;
-	landmark_tag = "specops_base";
-	name = "Central Command"
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/specialops/centcom)

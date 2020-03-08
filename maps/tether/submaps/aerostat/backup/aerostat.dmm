@@ -778,7 +778,7 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
-/obj/effect/overmap/visitable/sector/virgo2,
+/obj/shuttle_connector/aerostat,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)

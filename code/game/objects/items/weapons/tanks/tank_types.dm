@@ -230,3 +230,16 @@
 	..()
 	src.air_contents.adjust_gas_temp("nitrogen", (3*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*TN60C), TN60C)
 	return
+
+/*
+ * Hydrogen
+ */
+ 
+/obj/item/weapon/tank/hydrogen
+	name = "hydrogen tank"
+	desc = "A tank of hydrogen."
+	icon_state = "hydrogen"  // TODO - Leshana - COPY THIS
+
+/obj/item/weapon/tank/hydrogen/Initialize()
+	. = ..()
+	air_contents.adjust_gas("hydrogen", (8*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))

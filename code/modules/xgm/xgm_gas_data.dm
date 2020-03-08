@@ -15,6 +15,8 @@
 	var/list/overlay_limit = list()
 	//Flags.
 	var/list/flags = list()
+	//Products created when burned. For fuel only for now (not oxidizers)
+	var/list/burn_product = list()	// TODO - Leshana - Implement this!
 
 /decl/xgm_gas
 	var/id = ""
@@ -26,6 +28,7 @@
 	var/overlay_limit = null
 
 	var/flags = 0
+	var/burn_product
 
 /hook/startup/proc/generateGasData()
 	gas_data = new

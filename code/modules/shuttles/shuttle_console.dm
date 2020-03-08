@@ -142,3 +142,22 @@
 
 /obj/machinery/computer/shuttle_control/emp_act()
 	return
+
+/obj/item/weapon/paper/dockingcodes
+	name = "Docking Codes"
+
+/obj/item/weapon/paper/dockingcodes/Initialize()
+	. = ..()
+	spawn(0) //Race against New, someone should rewrite paper.
+		var/dockingcodes = null
+		if(using_map.use_overmap)
+			var/obj/effect/overmap/visitable/location = map_sectors["[z]"]
+			if(location && location.docking_codes)
+				dockingcodes = location.docking_codes
+
+		if(!dockingcodes)
+			info = "<center><h2>Daily Docking Codes</h2></center><br>The docking security system is down for maintenance. Please exercise caution when shuttles dock and depart."
+		else
+			info = "<center><h2>Daily Docking Codes</h2></center><br>The docking codes for this shift are '[dockingcodes]'.<br>These codes are secret, as they will allow hostile shuttles to dock with impunity if discovered.<br>"
+		info_links = info
+		icon_state = "paper_words"

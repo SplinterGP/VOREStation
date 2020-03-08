@@ -16,21 +16,6 @@
 /obj/structure/closet/crate/secure,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade)
-"ai" = (
-/obj/effect/floor_decal/transit/orange{
-	dir = 8
-	},
-/obj/effect/step_trigger/lost_in_space/tram,
-/turf/unsimulated/floor/techfloor_grid{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
-"aj" = (
-/obj/effect/step_trigger/lost_in_space/tram,
-/turf/unsimulated/floor/techfloor_grid{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
 "ak" = (
 /obj/machinery/fitness/heavy/lifter,
 /obj/effect/floor_decal/steeldecal/steel_decals10{
@@ -43,12 +28,6 @@
 	icon_state = "steel"
 	},
 /area/antag/antag_base)
-"al" = (
-/obj/effect/step_trigger/lost_in_space/tram,
-/turf/unsimulated/floor/maglev{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
 "am" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1380;
@@ -1434,16 +1413,6 @@
 	},
 /turf/simulated/floor/holofloor/tiled,
 /area/holodeck/source_emptycourt)
-"dy" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
-/area/shuttle/antag_ground{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
-"dz" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
-/area/shuttle/antag_space{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
 "dA" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -1463,12 +1432,6 @@
 	icon_state = "floor_dred"
 	},
 /area/shuttle/mercenary)
-"dD" = (
-/obj/machinery/computer/shuttle_control/multi/tether_antag_ground,
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/antag_ground{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
 "dE" = (
 /obj/structure/shuttle/engine/heater,
 /obj/structure/window/reinforced{
@@ -1583,15 +1546,6 @@
 "dY" = (
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/holodeck/source_boxingcourt)
-"dZ" = (
-/obj/effect/floor_decal/transit/orange{
-	dir = 4
-	},
-/obj/effect/step_trigger/lost_in_space/tram,
-/turf/unsimulated/floor/techfloor_grid{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
 "ea" = (
 /obj/machinery/power/emitter/gyrotron/anchored{
 	desc = "It is a heavy duty pulse laser emitter.";
@@ -2641,12 +2595,6 @@
 /area/syndicate_mothership{
 	name = "\improper Trader Base"
 	})
-"gX" = (
-/turf/unsimulated/mineral{
-	icon = 'icons/turf/transit_vr.dmi';
-	icon_state = "rock"
-	},
-/area/centcom/ferry)
 "gY" = (
 /obj/machinery/recharger,
 /obj/structure/table/steel_reinforced,
@@ -2768,45 +2716,6 @@
 /area/syndicate_mothership{
 	name = "\improper Trader Base"
 	})
-"hl" = (
-/turf/unsimulated/wall{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
-"hm" = (
-/obj/effect/floor_decal/transit/orange{
-	dir = 8
-	},
-/turf/unsimulated/floor/techfloor_grid{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
-"hn" = (
-/turf/unsimulated/floor/techfloor_grid{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
-"ho" = (
-/turf/unsimulated/floor/maglev{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
-"hp" = (
-/obj/effect/floor_decal/transit/orange{
-	dir = 4
-	},
-/turf/unsimulated/floor/techfloor_grid{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
-"hq" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/antag_ground{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
 "hr" = (
 /obj/machinery/door/blast/shutters{
 	dir = 8;
@@ -2855,17 +2764,6 @@
 /area/syndicate_mothership{
 	name = "\improper Trader Base"
 	})
-"hv" = (
-/obj/effect/floor_decal/transit/orange{
-	dir = 8
-	},
-/obj/effect/transit/light{
-	dir = 8
-	},
-/turf/unsimulated/floor/techfloor_grid{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
 "hw" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/bed/chair{
@@ -2951,17 +2849,6 @@
 /area/syndicate_mothership{
 	name = "\improper Trader Base"
 	})
-"hI" = (
-/obj/effect/floor_decal/transit/orange{
-	dir = 4
-	},
-/obj/effect/transit/light{
-	dir = 4
-	},
-/turf/unsimulated/floor/techfloor_grid{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
 "hJ" = (
 /obj/structure/bed/chair/holochair{
 	dir = 4
@@ -3092,97 +2979,13 @@
 	},
 /area/shuttle/mercenary)
 "hY" = (
-/obj/machinery/computer/shuttle_control/multi/syndicate{
+/obj/machinery/computer/shuttle_control/multi/mercenary{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},
 /area/shuttle/mercenary)
-"hZ" = (
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/antag_ground{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
-"ia" = (
-/obj/effect/floor_decal/transit/orange{
-	dir = 8
-	},
-/obj/effect/transit/light{
-	dir = 8
-	},
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
-	name = "thrower_throwdownside";
-	nostop = 1;
-	stopper = 0;
-	tiles = 0
-	},
-/turf/unsimulated/floor/techfloor_grid{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
-"ib" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 8;
-	name = "thrower_escapeshuttletop(left)";
-	tiles = 0
-	},
-/turf/unsimulated/floor/techfloor_grid{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
-"ic" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 8;
-	name = "thrower_escapeshuttletop(left)";
-	tiles = 0
-	},
-/turf/unsimulated/floor/maglev{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
-"id" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
-	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
-	},
-/turf/unsimulated/floor/techfloor_grid{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
-"ie" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 4;
-	name = "thrower_escapeshuttletop(right)";
-	tiles = 0
-	},
-/turf/unsimulated/floor/maglev{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
-"if" = (
-/obj/effect/floor_decal/transit/orange{
-	dir = 4
-	},
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
-	name = "thrower_throwdownside";
-	nostop = 1;
-	stopper = 0;
-	tiles = 0
-	},
-/turf/unsimulated/floor/techfloor_grid{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
 "ig" = (
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_yellow"
@@ -3197,12 +3000,6 @@
 	icon_state = "floor_red"
 	},
 /area/shuttle/mercenary)
-"ij" = (
-/obj/machinery/computer/shuttle_control/multi/tether_antag_space,
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/antag_space{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
 "ik" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -3246,53 +3043,6 @@
 /area/syndicate_mothership{
 	name = "\improper Trader Base"
 	})
-"in" = (
-/obj/effect/floor_decal/transit/orange{
-	dir = 8
-	},
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
-	name = "thrower_throwdownside";
-	nostop = 1;
-	stopper = 0;
-	tiles = 0
-	},
-/turf/unsimulated/floor/techfloor_grid{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
-"ip" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/centcom/ferry;
-	base_turf = /turf/simulated/floor/tiled/techfloor/grid;
-	docking_controller = null;
-	landmark_tag = "escape_transit";
-	name = "Escape Transit"
-	},
-/turf/unsimulated/floor/techfloor_grid{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
-"iq" = (
-/obj/effect/floor_decal/transit/orange{
-	dir = 4
-	},
-/obj/effect/transit/light{
-	dir = 4
-	},
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
-	name = "thrower_throwdownside";
-	nostop = 1;
-	stopper = 0;
-	tiles = 0
-	},
-/turf/unsimulated/floor/techfloor_grid{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
 "ir" = (
 /obj/structure/closet,
 /obj/machinery/light{
@@ -3327,14 +3077,6 @@
 	icon_state = "floor_red"
 	},
 /area/shuttle/mercenary)
-"iu" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/antag_space{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
 "iv" = (
 /obj/structure/table/glass,
 /obj/item/device/radio/intercom{
@@ -3422,11 +3164,6 @@
 	icon_state = "floor_black"
 	},
 /area/shuttle/mercenary)
-"iH" = (
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/antag_space{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
 "iI" = (
 /obj/structure/window/reinforced,
 /obj/machinery/door/blast/shutters{
@@ -3770,19 +3507,6 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade)
-"jr" = (
-/obj/structure/bed/chair{
-	dir = 1
-	},
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/antag_ground{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
 "js" = (
 /obj/item/weapon/tool/screwdriver,
 /obj/effect/spawner/newbomb/timer/syndicate,
@@ -4407,11 +4131,8 @@
 /turf/simulated/shuttle/plating,
 /area/shuttle/trade)
 "kN" = (
-/obj/machinery/computer/shuttle_control{
-	dir = 4;
-	name = "Beruang control console";
-	req_access = list(160);
-	shuttle_tag = "Trade"
+/obj/machinery/computer/shuttle_control/multi/trade{
+	dir = 4
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade)
@@ -4622,19 +4343,6 @@
 /obj/item/weapon/storage/toolbox/mechanical,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade)
-"lo" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
-	name = "thrower_throwdownside";
-	nostop = 1;
-	stopper = 0;
-	tiles = 0
-	},
-/turf/unsimulated/floor/techfloor_grid{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
 "lp" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -4713,19 +4421,6 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade)
-"lx" = (
-/obj/effect/step_trigger/thrower{
-	affect_ghosts = 1;
-	direction = 2;
-	name = "thrower_throwdownside";
-	nostop = 1;
-	stopper = 0;
-	tiles = 0
-	},
-/turf/unsimulated/floor/maglev{
-	icon = 'icons/turf/transit_vr.dmi'
-	},
-/area/centcom/ferry)
 "ly" = (
 /obj/machinery/button/remote/blast_door{
 	id = "tradeportshutters";
@@ -5254,15 +4949,6 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade)
-"mu" = (
-/obj/effect/transit/light{
-	dir = 8
-	},
-/turf/unsimulated/mineral{
-	icon = 'icons/turf/transit_vr.dmi';
-	icon_state = "rock"
-	},
-/area/centcom/ferry)
 "mv" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -6420,19 +6106,6 @@
 	tree_chance = 0
 	},
 /area/antag/antag_base)
-"oZ" = (
-/obj/structure/bed/chair{
-	dir = 1
-	},
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/antag_space{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
 "pa" = (
 /obj/structure/table/glass,
 /obj/item/weapon/handcuffs/fuzzy,
@@ -6477,14 +6150,6 @@
 	icon_state = "dark"
 	},
 /area/antag/antag_base)
-"pf" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/antag_ground{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
 "pg" = (
 /obj/structure/table/rack,
 /obj/item/weapon/gun/energy/plasmastun,
@@ -6809,18 +6474,6 @@
 	icon_state = "lino"
 	},
 /area/antag/antag_base)
-"pL" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/obj/machinery/recharger/wallcharger{
-	pixel_x = 32;
-	pixel_y = 0
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/antag_ground{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
 "pM" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 9
@@ -7029,26 +6682,6 @@
 	icon_state = "lino"
 	},
 /area/antag/antag_base)
-"qd" = (
-/obj/structure/bed/chair{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/antag_space{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
-"qe" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/obj/machinery/recharger/wallcharger{
-	pixel_x = 32;
-	pixel_y = 0
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/antag_space{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
 "qf" = (
 /obj/machinery/suit_cycler/syndicate{
 	locked = 0
@@ -7402,72 +7035,6 @@
 	icon_state = "cult"
 	},
 /area/antag/antag_base)
-"qF" = (
-/obj/structure/table/steel,
-/obj/item/roller,
-/obj/item/roller{
-	pixel_y = 8
-	},
-/obj/item/roller{
-	pixel_y = 16
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/antag_ground{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
-"qG" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "antag_ground_shuttle";
-	pixel_x = -25;
-	pixel_y = 0;
-	req_one_access = list(13,31);
-	tag_door = "antag_ground_shuttle_hatch"
-	},
-/obj/machinery/portable_atmospherics/canister/air,
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/antag_ground{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
-"qH" = (
-/obj/machinery/portable_atmospherics/canister/air,
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/antag_ground{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
-"qI" = (
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "antag_space_shuttle";
-	pixel_x = -25;
-	pixel_y = 0;
-	req_one_access = list(13,31);
-	tag_door = "antag_space_shuttle_hatch"
-	},
-/obj/structure/table/steel,
-/obj/item/roller,
-/obj/item/roller{
-	pixel_y = 8
-	},
-/obj/item/roller{
-	pixel_y = 16
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/antag_space{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
-"qJ" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/antag_space{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
 "qK" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -7590,19 +7157,6 @@
 	icon_state = "dark"
 	},
 /area/antag/antag_base)
-"qV" = (
-/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/tram{
-	name = "\improper Landcrawler Scrubber"
-	},
-/turf/simulated/shuttle/floor/black,
-/area/shuttle/antag_ground{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
-"qW" = (
-/turf/simulated/shuttle/floor/black,
-/area/shuttle/antag_ground{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
 "qX" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
@@ -7810,48 +7364,6 @@
 	icon_state = "cult"
 	},
 /area/antag/antag_base)
-"rm" = (
-/obj/machinery/portable_atmospherics/canister/air,
-/turf/simulated/shuttle/floor/black,
-/area/shuttle/antag_space{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
-"rn" = (
-/turf/simulated/shuttle/floor/black,
-/area/shuttle/antag_space{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
-"ro" = (
-/obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "antag_ground_shuttle_hatch";
-	locked = 1;
-	name = "Shuttle Hatch"
-	},
-/obj/effect/shuttle_landmark{
-	base_area = /area/antag/antag_base;
-	base_turf = /turf/unsimulated/floor/steel;
-	docking_controller = "antag_ground_dock";
-	landmark_tag = "antag_ground_base";
-	name = "Home Base"
-	},
-/turf/simulated/shuttle/floor/black,
-/area/shuttle/antag_ground{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
-"rp" = (
-/obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "antag_space_shuttle_hatch";
-	locked = 1;
-	name = "Shuttle Hatch"
-	},
-/turf/simulated/shuttle/floor/black,
-/area/shuttle/antag_space{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
 "rq" = (
 /obj/structure/table/rack,
 /obj/item/clothing/suit/storage/vest/heavy/merc,
@@ -8777,32 +8289,6 @@
 	icon_state = "dark"
 	},
 /area/antag/antag_base)
-"sC" = (
-/obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "antag_ground_dock_hatch";
-	locked = 1;
-	name = "Land Crawler Hatch"
-	},
-/turf/unsimulated/floor{
-	dir = 2;
-	icon_state = "dark"
-	},
-/area/antag/antag_base)
-"sD" = (
-/obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
-	icon_state = "door_locked";
-	id_tag = "antag_space_dock_hatch";
-	locked = 1;
-	name = "Proto Shuttle Hatch"
-	},
-/turf/unsimulated/floor{
-	dir = 2;
-	icon_state = "dark"
-	},
-/area/antag/antag_base)
 "sE" = (
 /obj/item/weapon/reagent_containers/hypospray,
 /obj/structure/table/steel,
@@ -8841,44 +8327,6 @@
 "sI" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 4
-	},
-/turf/unsimulated/floor{
-	dir = 2;
-	icon_state = "dark"
-	},
-/area/antag/antag_base)
-"sJ" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 1
-	},
-/obj/effect/floor_decal/borderfloorblack/corner2{
-	dir = 1
-	},
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "antag_ground_dock";
-	pixel_x = 0;
-	pixel_y = 28;
-	tag_door = "antag_ground_dock_hatch"
-	},
-/turf/unsimulated/floor{
-	dir = 2;
-	icon_state = "dark"
-	},
-/area/antag/antag_base)
-"sK" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 1
-	},
-/obj/effect/floor_decal/borderfloorblack/corner2{
-	dir = 1
-	},
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
-	id_tag = "antag_space_dock";
-	pixel_x = 0;
-	pixel_y = 28;
-	tag_door = "antag_space_dock_hatch"
 	},
 /turf/unsimulated/floor{
 	dir = 2;
@@ -10055,7 +9503,7 @@
 	},
 /area/ninja_dojo/dojo)
 "vq" = (
-/obj/structure/flight_right{
+/obj/machinery/computer/station_alert{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
@@ -10094,7 +9542,6 @@
 	icon_state = "tube1";
 	pixel_x = 0
 	},
-/obj/machinery/computer/security,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/ninja)
 "vG" = (
@@ -10278,7 +9725,7 @@
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
 "xD" = (
-/obj/structure/flight_left{
+/obj/machinery/computer/security{
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
@@ -10308,10 +9755,8 @@
 /turf/simulated/shuttle/plating,
 /area/shuttle/skipjack)
 "xQ" = (
-/obj/machinery/computer/shuttle_control/web/ninja{
-	dir = 1;
-	icon = 'icons/obj/computer.dmi';
-	icon_state = "flightcomp_center"
+/obj/machinery/computer/shuttle_control/multi/ninja{
+	dir = 1
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/ninja)
@@ -10942,10 +10387,6 @@
 	icon_state = "white"
 	},
 /area/skipjack_station)
-"DO" = (
-/obj/structure/flight_left,
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/skipjack)
 "DZ" = (
 /obj/machinery/gibber,
 /turf/unsimulated/floor{
@@ -11087,10 +10528,6 @@
 	icon_state = "dark"
 	},
 /area/ninja_dojo/dojo)
-"FE" = (
-/obj/structure/flight_right,
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/skipjack)
 "FF" = (
 /obj/structure/sink{
 	icon_state = "sink";
@@ -11165,9 +10602,7 @@
 	},
 /area/ninja_dojo/dojo)
 "Ge" = (
-/obj/machinery/computer/shuttle_control/web/heist{
-	icon = 'icons/obj/computer.dmi'
-	},
+/obj/machinery/computer/shuttle_control/multi/skipjack,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/skipjack)
 "Gi" = (
@@ -11418,7 +10853,7 @@
 	base_area = /area/space;
 	base_turf = /turf/space;
 	docking_controller = "trade_shuttle_bay";
-	landmark_tag = "trade_cc";
+	landmark_tag = "trade_dock";
 	name = "Trader Station"
 	},
 /turf/simulated/shuttle/floor/black,
@@ -11599,7 +11034,6 @@
 	icon_state = "tube1";
 	pixel_y = 0
 	},
-/obj/machinery/computer/station_alert,
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/ninja)
 "KL" = (
@@ -12791,25 +12225,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/shuttle/plating,
 /area/shuttle/ninja)
-"YU" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/obj/machinery/recharger/wallcharger{
-	pixel_x = 32;
-	pixel_y = 0
-	},
-/obj/effect/shuttle_landmark{
-	base_area = /area/antag/antag_base;
-	base_turf = /turf/unsimulated/floor/steel;
-	docking_controller = "antag_space_dock";
-	landmark_tag = "antag_space_base";
-	name = "Home Base"
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/antag_space{
-	base_turf = /turf/unsimulated/floor/techfloor_grid
-	})
 "YX" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -15589,7 +15004,7 @@ ap
 ap
 ap
 Qb
-DO
+ZA
 ZA
 ZA
 ZA
@@ -15873,7 +15288,7 @@ ap
 ap
 ap
 Qb
-FE
+ZA
 ZA
 ZA
 ZA
@@ -29851,38 +29266,38 @@ hx
 hx
 hx
 fZ
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -29993,38 +29408,38 @@ hy
 hJ
 hO
 fZ
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -30135,38 +29550,38 @@ hz
 hK
 hP
 fZ
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -30277,38 +29692,38 @@ hz
 hK
 hP
 fZ
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -30419,38 +29834,38 @@ hA
 hL
 hQ
 fZ
-gX
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-gX
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -30561,38 +29976,38 @@ hx
 hx
 hx
 fZ
-gX
-hm
-hm
-hv
-hm
-hm
-hm
-ia
-in
-in
-in
-ia
-in
-in
-in
-ia
-in
-in
-in
-ia
-in
-in
-in
-ia
-in
-hm
-hm
-hv
-hm
-hm
-ai
-mu
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -30703,38 +30118,38 @@ aL
 aL
 aL
 ar
-gX
-hn
-hn
-hn
-hn
-hn
-hn
-ib
-ib
-hn
-hn
-hn
-hn
-hn
-hn
-ip
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-lo
-lo
-hn
-hn
-hn
-hn
-hn
-aj
-gX
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -30845,38 +30260,38 @@ hB
 hD
 hD
 fZ
-gX
-ho
-ho
-ho
-ho
-ho
-ho
-ic
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-lx
-ho
-ho
-ho
-ho
-ho
-al
-gX
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -30902,9 +30317,9 @@ aB
 aB
 aB
 aB
-oX
-oX
-oX
+aB
+aB
+aB
 oX
 oX
 oX
@@ -30987,38 +30402,38 @@ hC
 hC
 hC
 fZ
-gX
-hn
-hn
-hn
-hn
-hn
-hn
-ib
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-lo
-hn
-hn
-hn
-hn
-hn
-aj
-gX
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -31044,17 +30459,17 @@ aB
 aB
 aB
 aB
-oX
-dy
-dy
-dy
-dy
-dy
-dy
-dy
-dy
-dy
-dy
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
 oX
 sj
 sR
@@ -31129,38 +30544,6 @@ hD
 hD
 hD
 fZ
-gX
-hn
-hn
-hn
-hn
-hn
-hn
-ib
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-lo
-hn
-hn
-hn
-hn
-hn
-aj
-gX
 ap
 ap
 ap
@@ -31177,6 +30560,49 @@ ap
 ap
 ap
 ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
 aB
 aB
 aB
@@ -31187,18 +30613,7 @@ aB
 aB
 aB
 oX
-dy
-dD
-jr
-pf
-pf
-pf
-qF
-qG
-qV
-dy
-oX
-sJ
+sj
 sR
 oX
 tl
@@ -31271,38 +30686,6 @@ hD
 hD
 hD
 fZ
-gX
-hn
-hn
-hn
-hn
-hn
-hn
-id
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-lo
-hn
-hn
-hn
-hn
-hn
-aj
-gX
 ap
 ap
 ap
@@ -31319,6 +30702,49 @@ ap
 ap
 ap
 ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
 aB
 aB
 aB
@@ -31329,18 +30755,7 @@ aB
 aB
 aB
 oX
-dy
-hZ
-hZ
-hZ
-hZ
-hZ
-hZ
-hZ
-qW
-ro
-sC
-pk
+sj
 sR
 sO
 tm
@@ -31413,38 +30828,38 @@ hE
 hE
 hE
 fZ
-gX
-hn
-hn
-hn
-hn
-hn
-hn
-id
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-lo
-hn
-hn
-hn
-hn
-hn
-aj
-gX
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -31470,17 +30885,17 @@ aB
 aB
 aB
 aB
-oX
-dy
-hq
-hq
-pL
-pL
-hq
-hZ
-qH
-qV
-dy
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
 oX
 qA
 sR
@@ -31555,38 +30970,38 @@ hD
 hD
 hR
 fZ
-gX
-ho
-ho
-ho
-ho
-ho
-ho
-ie
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-ho
-lx
-ho
-ho
-ho
-ho
-ho
-al
-gX
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -31612,17 +31027,17 @@ aB
 aB
 aB
 aB
-oX
-dy
-dy
-dy
-dy
-dy
-dy
-dy
-dy
-dy
-dy
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
 oX
 sj
 sR
@@ -31697,38 +31112,38 @@ aL
 aL
 aL
 ar
-gX
-hn
-hn
-hn
-hn
-hn
-hn
-id
-id
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-hn
-lo
-lo
-hn
-hn
-hn
-hn
-hn
-aj
-gX
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -31754,17 +31169,17 @@ aB
 aB
 aB
 aB
-oX
-oX
-oX
-oX
-oX
-oX
-oX
-oX
-oX
-oX
-oX
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
 oX
 sj
 sR
@@ -31839,38 +31254,38 @@ hF
 hF
 hF
 fZ
-gX
-hp
-hp
-hp
-hI
-hp
-hp
-if
-iq
-if
-if
-if
-iq
-if
-if
-if
-iq
-if
-if
-if
-iq
-if
-if
-if
-iq
-hp
-hp
-hp
-hI
-hp
-dZ
-gX
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -31896,17 +31311,17 @@ aB
 aB
 aB
 aB
-oX
-dz
-dz
-dz
-dz
-dz
-dz
-dz
-dz
-dz
-dz
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
 oX
 sj
 sR
@@ -31981,38 +31396,6 @@ hF
 hF
 hF
 fZ
-gX
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-gX
 ap
 ap
 ap
@@ -32031,6 +31414,49 @@ ap
 ap
 ap
 ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
 aB
 aB
 aB
@@ -32039,18 +31465,7 @@ aB
 aB
 aB
 oX
-dz
-ij
-oZ
-qd
-qd
-qd
-iH
-qI
-rm
-dz
-oX
-sK
+sj
 sR
 sO
 tq
@@ -32123,38 +31538,6 @@ hF
 hF
 hF
 fZ
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
 ap
 ap
 ap
@@ -32173,6 +31556,49 @@ ap
 ap
 ap
 ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
 aB
 aB
 aB
@@ -32181,18 +31607,7 @@ aB
 aB
 aB
 oX
-dz
-iH
-iH
-iH
-iH
-iH
-iH
-iH
-rn
-rp
-sD
-pk
+sj
 sR
 sO
 tr
@@ -32265,38 +31680,38 @@ hF
 hF
 hF
 fZ
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -32322,17 +31737,17 @@ aB
 aB
 aB
 aB
-oX
-dz
-iu
-iu
-qe
-YU
-iu
-iH
-qJ
-rm
-dz
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
 oX
 pk
 sR
@@ -32407,38 +31822,38 @@ hF
 hF
 hF
 fZ
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -32464,17 +31879,17 @@ aB
 aB
 aB
 aB
-oX
-dz
-dz
-dz
-dz
-dz
-dz
-dz
-dz
-dz
-dz
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
 oX
 sL
 sV
@@ -32549,38 +31964,38 @@ hF
 hF
 hF
 fZ
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
-gX
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 ap
 ap
 ap
@@ -32606,17 +32021,17 @@ aB
 aB
 aB
 aB
-oX
-oX
-oX
-oX
-oX
-oX
-oX
-oX
-oX
-oX
-oX
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
+aB
 oX
 oX
 oX

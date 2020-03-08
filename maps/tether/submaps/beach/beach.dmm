@@ -311,8 +311,8 @@
 /obj/effect/shuttle_landmark{
 	base_area = /area/tether_away/beach/jungle;
 	base_turf = /turf/simulated/floor/beach/sand/desert;
-	landmark_tag = "tether_excursion_beach";
-	name = "Beach Area (Center)"
+	landmark_tag = "beach_c";
+	name = "Virgo 4 Beach (Center)"
 	},
 /turf/simulated/floor/beach/sand/desert,
 /area/tether_away/beach/jungle)
@@ -334,6 +334,15 @@
 /obj/effect/step_trigger/zlevel_fall/beach,
 /turf/simulated/floor/beach/sand/desert,
 /area/tether_away/beach/jungle)
+"iA" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/tether_away/beach/jungle;
+	base_turf = /turf/simulated/floor/beach/sand/desert;
+	landmark_tag = "beach_nw";
+	name = "Virgo 4 Beach (NW)"
+	},
+/turf/simulated/floor/beach/sand/desert,
+/area/tether_away/beach/jungle)
 "xW" = (
 /obj/tether_away_spawner/beach_outside_friendly,
 /turf/simulated/floor/beach/sand/desert,
@@ -342,15 +351,6 @@
 /obj/effect/overmap/visitable/sector/virgo4,
 /turf/simulated/floor/water/deep/ocean,
 /area/tether_away/beach/water)
-"LC" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/tether_away/beach/jungle;
-	base_turf = /turf/simulated/floor/beach/sand/desert;
-	landmark_tag = "tether_excursion_beach3";
-	name = "Beach Area (Northwest)"
-	},
-/turf/simulated/floor/beach/sand/desert,
-/area/tether_away/beach/jungle)
 "TU" = (
 /obj/tether_away_spawner/beach_outside,
 /turf/simulated/floor/beach/sand/desert,
@@ -363,8 +363,8 @@
 /obj/effect/shuttle_landmark{
 	base_area = /area/tether_away/beach/jungle;
 	base_turf = /turf/simulated/floor/beach/sand/desert;
-	landmark_tag = "tether_excursion_beach2";
-	name = "Beach Area (East)"
+	landmark_tag = "beach_e";
+	name = "Virgo 4 Beach (E)"
 	},
 /turf/simulated/floor/beach/sand/desert,
 /area/tether_away/beach/jungle)
@@ -1227,7 +1227,7 @@ aa
 aa
 aa
 aa
-aa
+ab
 aa
 aa
 aa
@@ -1380,7 +1380,7 @@ aa
 aa
 aa
 aa
-aa
+ab
 aa
 aa
 aa
@@ -1831,6 +1831,7 @@ aa
 aa
 aa
 aa
+ac
 aa
 aa
 aa
@@ -1881,8 +1882,7 @@ aa
 aa
 aa
 aa
-aa
-aa
+ab
 aa
 aa
 aa
@@ -1999,7 +1999,7 @@ aa
 aa
 aa
 aa
-aa
+ab
 aa
 aa
 aa
@@ -2113,7 +2113,7 @@ aa
 aa
 aa
 aa
-ac
+aa
 aa
 aa
 aa
@@ -2243,7 +2243,7 @@ aa
 aa
 aa
 aa
-ac
+aa
 aa
 aa
 aa
@@ -2815,7 +2815,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -3361,7 +3361,7 @@ aa
 aa
 aa
 aa
-aa
+ab
 aa
 aa
 aa
@@ -3516,7 +3516,6 @@ aa
 aa
 aa
 aa
-LC
 aa
 aa
 aa
@@ -3530,7 +3529,8 @@ aa
 aa
 aa
 aa
-ac
+aa
+aa
 aa
 aa
 aa
@@ -3806,7 +3806,7 @@ aa
 aa
 aa
 aa
-ac
+aa
 aa
 aa
 aa
@@ -4228,7 +4228,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -4506,9 +4506,9 @@ aa
 aa
 aa
 aa
-ac
 aa
 aa
+iA
 aa
 aa
 aa
@@ -4668,7 +4668,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -4814,7 +4814,7 @@ aa
 aa
 aa
 aa
-aa
+ab
 aa
 aa
 aa
@@ -5230,7 +5230,7 @@ aa
 aa
 aa
 aa
-ac
+aa
 aa
 aa
 aa
@@ -5382,7 +5382,7 @@ aa
 aa
 aa
 aa
-ac
+aa
 aa
 aa
 aa
@@ -5519,7 +5519,6 @@ aa
 aa
 aa
 aa
-TU
 aa
 aa
 aa
@@ -5529,6 +5528,7 @@ aa
 aa
 aa
 aa
+ac
 aa
 aa
 aa
@@ -5665,6 +5665,7 @@ aa
 aa
 aa
 aa
+TU
 aa
 aa
 aa
@@ -5674,8 +5675,7 @@ aa
 aa
 aa
 aa
-aa
-aa
+ab
 aa
 aa
 aa
@@ -5929,8 +5929,8 @@ aa
 aa
 aa
 aa
-ac
-bh
+aa
+aa
 aa
 aa
 aa
@@ -6055,7 +6055,7 @@ aa
 aa
 aa
 aa
-aa
+ab
 aa
 aa
 aa
@@ -6652,8 +6652,8 @@ aa
 aa
 aa
 aa
-ab
-bh
+aa
+aa
 aa
 aa
 aa
@@ -6775,7 +6775,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -7056,7 +7056,7 @@ aa
 aa
 aa
 aa
-aa
+ab
 aa
 aa
 aa
@@ -7211,7 +7211,7 @@ aa
 aa
 aa
 aa
-ab
+aa
 aa
 aa
 aa
@@ -7369,8 +7369,8 @@ aa
 aa
 aa
 aa
-aa
-ac
+ab
+bh
 aa
 aa
 aa
@@ -7504,7 +7504,7 @@ aa
 aa
 aa
 aa
-ac
+aa
 aa
 aa
 aa
@@ -8086,7 +8086,7 @@ aa
 aa
 aa
 aa
-aa
+ac
 aa
 aa
 aa
@@ -8191,6 +8191,8 @@ aa
 aa
 aa
 aa
+ac
+bh
 aa
 aa
 aa
@@ -8219,9 +8221,7 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
+ac
 aa
 aa
 aa
@@ -8489,7 +8489,7 @@ aa
 aa
 aa
 aa
-aa
+ab
 aa
 aa
 aa

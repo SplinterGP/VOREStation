@@ -774,14 +774,6 @@
 	icon_state = "void-hc"
 	},
 /area/tether_away/aerostat/inside)
-"cf" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/obj/effect/overmap/visitable/sector/virgo2,
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
 "cg" = (
 /obj/machinery/door/airlock/multi_tile/metal{
 	icon_state = "door_closed";
@@ -880,8 +872,8 @@
 /obj/effect/shuttle_landmark{
 	base_area = /area/tether_away/aerostat;
 	base_turf = /turf/unsimulated/floor/sky/virgo2_sky;
-	landmark_tag = "tether_excursion_aerostat";
-	name = "Excursion Aerostat"
+	landmark_tag = "aerostat_west";
+	name = "Virgo 2 Aerostat (W)"
 	},
 /turf/unsimulated/floor/sky/virgo2_sky,
 /area/tether_away/aerostat)
@@ -1652,6 +1644,18 @@
 /obj/random/contraband,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
+"iZ" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat)
+"jx" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat)
 "kF" = (
 /obj/random/action_figure,
 /turf/simulated/floor/tiled/techfloor/virgo2,
@@ -1660,23 +1664,45 @@
 /obj/effect/shuttle_landmark{
 	base_area = /area/tether_away/aerostat;
 	base_turf = /turf/unsimulated/floor/sky/virgo2_sky;
-	landmark_tag = "aerostat_up";
-	name = "Remmi Aerostat"
+	landmark_tag = "aerostat_east";
+	name = "Virgo 2 Aerostat (E)"
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/aerostat)
+"rw" = (
+/obj/effect/overmap/visitable/sector/virgo2,
+/turf/unsimulated/floor/sky/virgo2_sky,
+/area/tether_away/aerostat)
 "tZ" = (
 /obj/structure/table/standard,
 /obj/random/powercell,
 /obj/random/contraband,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
+"ug" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/tether_away/aerostat;
+	base_turf = /turf/unsimulated/floor/sky/virgo2_sky;
+	landmark_tag = "aerostat_northwest";
+	name = "Virgo 2 Aerostat (NW)"
+	},
+/turf/unsimulated/floor/sky/virgo2_sky,
+/area/tether_away/aerostat)
 "uU" = (
 /obj/structure/table/standard,
 /obj/item/weapon/gun/energy/taser/xeno,
 /obj/random/cigarettes,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
+"uV" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/tether_away/aerostat;
+	base_turf = /turf/unsimulated/floor/sky/virgo2_sky;
+	landmark_tag = "aerostat_south";
+	name = "Virgo 2 Aerostat (S)"
+	},
+/turf/unsimulated/floor/sky/virgo2_sky,
+/area/tether_away/aerostat)
 "xA" = (
 /obj/random/firstaid,
 /turf/simulated/floor/tiled/techfloor/virgo2,
@@ -1685,6 +1711,13 @@
 /obj/structure/salvageable/autolathe,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
+"zl" = (
+/obj/structure/railing{
+	icon_state = "railing0";
+	dir = 1
+	},
+/turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat)
 "AS" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
@@ -1703,6 +1736,18 @@
 /obj/random/drinkbottle,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
+"DP" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/tether_away/aerostat;
+	base_turf = /turf/unsimulated/floor/sky/virgo2_sky;
+	landmark_tag = "aerostat_northeast";
+	name = "Virgo 2 Aerostat (NE)"
+	},
+/turf/unsimulated/floor/sky/virgo2_sky,
+/area/tether_away/aerostat)
+"EK" = (
+/turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat)
 "Fg" = (
 /obj/random/firstaid,
 /turf/simulated/floor/plating/virgo2,
@@ -1715,6 +1760,10 @@
 "Hl" = (
 /obj/random/tank,
 /turf/simulated/floor/bluegrid/virgo2,
+/area/tether_away/aerostat/inside)
+"IG" = (
+/obj/machinery/door/airlock/external,
+/turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
 "Jb" = (
 /obj/random/toy,
@@ -1761,6 +1810,10 @@
 /obj/random/drinkbottle,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
+"WJ" = (
+/obj/structure/railing,
+/turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat)
 "Ym" = (
 /obj/structure/table/standard,
 /obj/item/weapon/gun/energy/taser/xeno,
@@ -2052,7 +2105,7 @@ aw
 aw
 aw
 aw
-aw
+rw
 cZ
 "}
 (3,1,1) = {"
@@ -7095,7 +7148,7 @@ aw
 aw
 aw
 aa
-cf
+cc
 cY
 aa
 aw
@@ -10884,7 +10937,7 @@ aw
 aw
 aw
 aw
-aw
+ug
 aw
 aw
 aw
@@ -11168,8 +11221,8 @@ aw
 aw
 aw
 aw
-aw
-aw
+zl
+WJ
 aw
 aw
 aw
@@ -11310,8 +11363,8 @@ aw
 aw
 aw
 aw
-aw
-aw
+zl
+WJ
 aw
 aw
 aw
@@ -11452,19 +11505,19 @@ aw
 aw
 aw
 aw
+zl
+WJ
 aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+ac
+bo
+bf
+ac
+ac
+bo
+bf
 ac
 be
 be
@@ -11530,14 +11583,14 @@ aw
 aw
 bq
 ac
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+ac
+bo
+bf
+ac
+ac
+bo
+bf
+ac
 aw
 aw
 aw
@@ -11594,20 +11647,20 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-ac
+zl
+EK
+jx
+jx
+jx
+jx
+IG
+be
+be
+be
+be
+be
+be
+IG
 be
 gD
 bj
@@ -11671,17 +11724,17 @@ aw
 aw
 aw
 bq
-bf
+be
+IG
+be
+be
+be
+be
+be
+be
+IG
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+uV
 aw
 aw
 aw
@@ -11736,20 +11789,20 @@ aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-ac
+zl
+EK
+iZ
+iZ
+iZ
+iZ
+IG
+be
+be
+be
+be
+be
+be
+IG
 be
 be
 bj
@@ -11813,15 +11866,15 @@ aw
 aw
 aw
 bq
-bf
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+be
+IG
+be
+be
+be
+be
+be
+be
+IG
 aw
 aw
 aw
@@ -11878,19 +11931,19 @@ aw
 aw
 aw
 aw
+zl
+WJ
 aw
 aw
 aw
 aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+ac
+bo
+bf
+ac
+ac
+bo
+bf
 ac
 be
 be
@@ -11956,14 +12009,14 @@ aw
 aw
 bq
 ac
-aw
-aw
-aw
-aw
-aw
-aw
-aw
-aw
+ac
+bo
+bf
+ac
+ac
+bo
+bf
+ac
 aw
 aw
 aw
@@ -12020,8 +12073,8 @@ aw
 aw
 aw
 aw
-aw
-aw
+zl
+WJ
 aw
 aw
 aw
@@ -12162,8 +12215,8 @@ aw
 aw
 aw
 aw
-aw
-aw
+zl
+WJ
 aw
 aw
 aw
@@ -12446,7 +12499,7 @@ aw
 aw
 aw
 aw
-aw
+DP
 aw
 aw
 aw

@@ -25,6 +25,17 @@
 /turf/space,
 /turf/space/transit/north,
 /area/space)
+"bR" = (
+/obj/effect/step_trigger/thrower{
+	affect_ghosts = 1;
+	direction = 4;
+	name = "thrower_escapeshuttletop(right)";
+	tiles = 0
+	},
+/turf/unsimulated/floor/techfloor_grid{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
 "dJ" = (
 /turf/unsimulated/wall/seperator,
 /area/space)
@@ -54,6 +65,52 @@
 	},
 /turf/space/bluespace,
 /area/space)
+"fs" = (
+/turf/unsimulated/mineral{
+	icon = 'icons/turf/transit_vr.dmi';
+	icon_state = "rock"
+	},
+/area/centcom/ferry)
+"fE" = (
+/turf/unsimulated/wall{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
+"gx" = (
+/obj/effect/floor_decal/transit/orange{
+	dir = 8
+	},
+/obj/effect/step_trigger/thrower{
+	affect_ghosts = 1;
+	direction = 2;
+	name = "thrower_throwdownside";
+	nostop = 1;
+	stopper = 0;
+	tiles = 0
+	},
+/turf/unsimulated/floor/techfloor_grid{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
+"gy" = (
+/obj/effect/floor_decal/transit/orange{
+	dir = 8
+	},
+/obj/effect/transit/light{
+	dir = 8
+	},
+/obj/effect/step_trigger/thrower{
+	affect_ghosts = 1;
+	direction = 2;
+	name = "thrower_throwdownside";
+	nostop = 1;
+	stopper = 0;
+	tiles = 0
+	},
+/turf/unsimulated/floor/techfloor_grid{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
 "gO" = (
 /obj/effect/step_trigger/teleporter/planetary_fall/virgo3b,
 /turf/simulated/sky/virgo3b/south,
@@ -336,6 +393,30 @@
 	icon_state = "rock"
 	},
 /area/space)
+"iZ" = (
+/obj/effect/step_trigger/thrower{
+	affect_ghosts = 1;
+	direction = 8;
+	name = "thrower_escapeshuttletop(left)";
+	tiles = 0
+	},
+/turf/unsimulated/floor/maglev{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
+"jA" = (
+/obj/effect/step_trigger/thrower{
+	affect_ghosts = 1;
+	direction = 2;
+	name = "thrower_throwdownside";
+	nostop = 1;
+	stopper = 0;
+	tiles = 0
+	},
+/turf/unsimulated/floor/techfloor_grid{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
 "kd" = (
 /obj/effect/step_trigger/teleporter/random{
 	affect_ghosts = 1;
@@ -349,6 +430,44 @@
 	},
 /turf/space/transit/north,
 /area/space)
+"lb" = (
+/obj/effect/floor_decal/transit/orange{
+	dir = 8
+	},
+/turf/unsimulated/floor/techfloor_grid{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
+"qf" = (
+/turf/unsimulated/floor/maglev{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
+"sd" = (
+/turf/unsimulated/floor/techfloor_grid{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
+"uO" = (
+/obj/effect/floor_decal/transit/orange{
+	dir = 8
+	},
+/obj/effect/step_trigger/lost_in_space/tram,
+/turf/unsimulated/floor/techfloor_grid{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
+"xb" = (
+/obj/effect/floor_decal/transit/orange{
+	dir = 8
+	},
+/obj/effect/transit/light{
+	dir = 8
+	},
+/turf/unsimulated/floor/techfloor_grid{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
 "yn" = (
 /obj/effect/shuttle_landmark/transit{
 	base_area = /area/space;
@@ -358,9 +477,86 @@
 	},
 /turf/space/transit/north,
 /area/space)
+"Ae" = (
+/obj/effect/step_trigger/thrower{
+	affect_ghosts = 1;
+	direction = 2;
+	name = "thrower_throwdownside";
+	nostop = 1;
+	stopper = 0;
+	tiles = 0
+	},
+/turf/unsimulated/floor/maglev{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
+"CV" = (
+/obj/effect/floor_decal/transit/orange{
+	dir = 4
+	},
+/obj/effect/transit/light{
+	dir = 4
+	},
+/turf/unsimulated/floor/techfloor_grid{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
+"Dw" = (
+/obj/effect/step_trigger/lost_in_space/tram,
+/turf/unsimulated/floor/maglev{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
+"EM" = (
+/obj/effect/step_trigger/thrower{
+	affect_ghosts = 1;
+	direction = 4;
+	name = "thrower_escapeshuttletop(right)";
+	tiles = 0
+	},
+/turf/unsimulated/floor/maglev{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
+"HJ" = (
+/obj/effect/floor_decal/transit/orange{
+	dir = 4
+	},
+/obj/effect/transit/light{
+	dir = 4
+	},
+/obj/effect/step_trigger/thrower{
+	affect_ghosts = 1;
+	direction = 2;
+	name = "thrower_throwdownside";
+	nostop = 1;
+	stopper = 0;
+	tiles = 0
+	},
+/turf/unsimulated/floor/techfloor_grid{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
 "HO" = (
 /turf/space/transit/north,
 /area/space)
+"IW" = (
+/obj/effect/floor_decal/transit/orange{
+	dir = 4
+	},
+/turf/unsimulated/floor/techfloor_grid{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
+"Jg" = (
+/obj/effect/floor_decal/transit/orange{
+	dir = 4
+	},
+/obj/effect/step_trigger/lost_in_space/tram,
+/turf/unsimulated/floor/techfloor_grid{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
 "Js" = (
 /obj/effect/shuttle_landmark/transit{
 	base_area = /area/space;
@@ -370,10 +566,47 @@
 	},
 /turf/space/transit/north,
 /area/space)
+"Mo" = (
+/obj/effect/transit/light{
+	dir = 8
+	},
+/turf/unsimulated/mineral{
+	icon = 'icons/turf/transit_vr.dmi';
+	icon_state = "rock"
+	},
+/area/centcom/ferry)
 "Nb" = (
 /turf/space,
 /turf/space/transit/north,
 /area/space)
+"Nj" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/centcom/ferry;
+	base_turf = /turf/simulated/floor/tiled/techfloor/grid;
+	docking_controller = null;
+	landmark_tag = "escape_transit";
+	name = "Escape Transit"
+	},
+/turf/unsimulated/floor/techfloor_grid{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
+"Qk" = (
+/obj/effect/floor_decal/transit/orange{
+	dir = 4
+	},
+/obj/effect/step_trigger/thrower{
+	affect_ghosts = 1;
+	direction = 2;
+	name = "thrower_throwdownside";
+	nostop = 1;
+	stopper = 0;
+	tiles = 0
+	},
+/turf/unsimulated/floor/techfloor_grid{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
 "SG" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -385,6 +618,12 @@
 	},
 /turf/space/transit/north,
 /area/space)
+"SV" = (
+/obj/effect/step_trigger/lost_in_space/tram,
+/turf/unsimulated/floor/techfloor_grid{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
 "TL" = (
 /obj/effect/shuttle_landmark/transit{
 	base_area = /area/space;
@@ -394,6 +633,17 @@
 	},
 /turf/space/transit/east,
 /area/space)
+"UA" = (
+/obj/effect/step_trigger/thrower{
+	affect_ghosts = 1;
+	direction = 8;
+	name = "thrower_escapeshuttletop(left)";
+	tiles = 0
+	},
+/turf/unsimulated/floor/techfloor_grid{
+	icon = 'icons/turf/transit_vr.dmi'
+	},
+/area/centcom/ferry)
 
 (1,1,1) = {"
 aa
@@ -3247,7 +3497,7 @@ HO
 HO
 HO
 SG
-Js
+HO
 HO
 HO
 HO
@@ -4383,7 +4633,7 @@ HO
 HO
 SG
 HO
-HO
+Js
 HO
 HO
 HO
@@ -17491,38 +17741,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
 aa
 aa
 aa
@@ -17633,38 +17883,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
 aa
 aa
 aa
@@ -17775,38 +18025,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
 aa
 aa
 aa
@@ -17917,38 +18167,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
 aa
 aa
 aa
@@ -18059,38 +18309,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fs
 aa
 aa
 aa
@@ -18201,38 +18451,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+lb
+lb
+xb
+lb
+lb
+lb
+gy
+gx
+gx
+gx
+gy
+gx
+gx
+gx
+gy
+gx
+gx
+gx
+gy
+gx
+gx
+gx
+gy
+gx
+lb
+lb
+xb
+lb
+lb
+uO
+Mo
 aa
 aa
 aa
@@ -18247,7 +18497,7 @@ HO
 SG
 HO
 HO
-HO
+yn
 HO
 HO
 HO
@@ -18343,38 +18593,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+sd
+sd
+sd
+sd
+sd
+sd
+UA
+UA
+sd
+sd
+sd
+sd
+sd
+sd
+Nj
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+jA
+jA
+sd
+sd
+sd
+sd
+sd
+SV
+fs
 aa
 aa
 aa
@@ -18485,38 +18735,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+qf
+qf
+qf
+qf
+qf
+qf
+iZ
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+Ae
+qf
+qf
+qf
+qf
+qf
+Dw
+fs
 aa
 aa
 aa
@@ -18627,38 +18877,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+sd
+sd
+sd
+sd
+sd
+sd
+UA
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+jA
+sd
+sd
+sd
+sd
+sd
+SV
+fs
 aa
 aa
 aa
@@ -18769,38 +19019,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+sd
+sd
+sd
+sd
+sd
+sd
+UA
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+jA
+sd
+sd
+sd
+sd
+sd
+SV
+fs
 aa
 aa
 aa
@@ -18812,7 +19062,7 @@ HO
 HO
 HO
 SG
-yn
+HO
 HO
 HO
 HO
@@ -18911,38 +19161,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+sd
+sd
+sd
+sd
+sd
+sd
+bR
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+jA
+sd
+sd
+sd
+sd
+sd
+SV
+fs
 aa
 aa
 aa
@@ -19053,38 +19303,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+sd
+sd
+sd
+sd
+sd
+sd
+bR
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+jA
+sd
+sd
+sd
+sd
+sd
+SV
+fs
 aa
 aa
 aa
@@ -19195,38 +19445,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+qf
+qf
+qf
+qf
+qf
+qf
+EM
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+qf
+Ae
+qf
+qf
+qf
+qf
+qf
+Dw
+fs
 aa
 aa
 aa
@@ -19337,38 +19587,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+sd
+sd
+sd
+sd
+sd
+sd
+bR
+bR
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+sd
+jA
+jA
+sd
+sd
+sd
+sd
+sd
+SV
+fs
 aa
 aa
 aa
@@ -19479,38 +19729,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+IW
+IW
+IW
+CV
+IW
+IW
+Qk
+HJ
+Qk
+Qk
+Qk
+HJ
+Qk
+Qk
+Qk
+HJ
+Qk
+Qk
+Qk
+HJ
+Qk
+Qk
+Qk
+HJ
+IW
+IW
+IW
+CV
+IW
+Jg
+fs
 aa
 aa
 aa
@@ -19621,38 +19871,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fE
+fs
 aa
 aa
 aa
@@ -19763,38 +20013,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
 aa
 aa
 aa
@@ -19905,38 +20155,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
 aa
 aa
 aa
@@ -20047,38 +20297,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
 aa
 aa
 aa
@@ -20189,38 +20439,38 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
+fs
 aa
 aa
 aa

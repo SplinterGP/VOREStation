@@ -5,7 +5,7 @@
 	desc = "Home to sand, and things with big fluffy ears."
 	icon_state = "globe"
 	color = "#ffd300" //Sandy
-	initial_generic_waypoints = list("tether_excursion_beach","tether_excursion_beach2","tether_excursion_beach3")
+	initial_generic_waypoints = list("beach_e", "beach_c", "beach_nw")
 
 //This is a special subtype of the thing that generates ores on a map
 //It will generate more rich ores because of the lower numbers than the normal one

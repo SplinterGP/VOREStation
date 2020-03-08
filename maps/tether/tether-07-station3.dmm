@@ -7747,15 +7747,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
-"lY" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/space;
-	base_turf = /turf/space;
-	landmark_tag = "antag_space_nearby";
-	name = "Space near Tether"
-	},
-/turf/space,
-/area/space)
 "lZ" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green,
@@ -30582,8 +30573,8 @@
 /obj/effect/shuttle_landmark{
 	base_area = /area/space;
 	base_turf = /turf/space;
-	landmark_tag = "tether_space_SW";
-	name = "Near Tether (SW)"
+	landmark_tag = "tether_space_SE";
+	name = "Near Tether (SE)"
 	},
 /turf/space,
 /area/space)
@@ -46742,7 +46733,7 @@ aa
 aa
 aa
 aa
-lY
+aa
 aa
 aa
 aa

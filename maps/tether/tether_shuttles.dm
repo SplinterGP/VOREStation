@@ -7,13 +7,30 @@
 	shuttle_tag = "Tether Backup"
 	req_one_access = list(access_heads,access_pilot)
 
-/obj/machinery/computer/shuttle_control/multi/tether_antag_ground
-	name = "land crawler control console"
-	shuttle_tag = "Land Crawler"
+/obj/machinery/computer/shuttle_control/multi/mercenary
+	name = "vessel control console"
+	shuttle_tag = "Mercenary"
+	req_one_access = list(access_syndicate)
 
-/obj/machinery/computer/shuttle_control/multi/tether_antag_space
-	name = "protoshuttle control console"
-	shuttle_tag = "Proto"
+/obj/machinery/computer/shuttle_control/multi/ninja
+	name = "vessel control console"
+	shuttle_tag = "Ninja"
+	//req_one_access = list()
+
+/obj/machinery/computer/shuttle_control/multi/skipjack
+	name = "vessel control console"
+	shuttle_tag = "Skipjack"
+	//req_one_access = list()
+
+/obj/machinery/computer/shuttle_control/multi/specops
+	name = "vessel control console"
+	shuttle_tag = "NDV Phantom"
+	req_one_access = list(access_cent_specops)
+
+/obj/machinery/computer/shuttle_control/multi/trade
+	name = "vessel control console"
+	shuttle_tag = "Trade"
+	req_one_access = list(access_trader)
 
 /obj/machinery/computer/shuttle_control/cruiser_shuttle
 	name = "cruiser shuttle control console"
@@ -176,7 +193,19 @@
 	start_y = 10
 	icon_state = "globe"
 	color = "#d35b5b"
-	initial_generic_waypoints = list("tether_dockarm_d1a1","tether_dockarm_d1a2","tether_dockarm_d1a3","tether_dockarm_d2a1","tether_dockarm_d2a2","tether_dockarm_d1l","tether_dockarm_d2l")
+	initial_generic_waypoints = list(
+		"tether_dockarm_d1a1", //Bottom left,
+		"tether_dockarm_d1a2", //Top left,
+		"tether_dockarm_d1a3", //Left on inside,
+		"tether_dockarm_d2a1", //Bottom right,
+		"tether_dockarm_d2a2", //Top right,
+		"tether_dockarm_d1l", //End of left arm,
+		"tether_dockarm_d2l", //End of right arm,
+		"tether_space_SE", //station1, bottom right of space,
+		"tether_space_NE", //station1, top right of space,
+		"tether_space_SW", //station3, bottom left of space,
+
+		)
 
 // The 'shuttle' of the excursion shuttle
 /datum/shuttle/autodock/overmap/excursion
@@ -195,150 +224,3 @@
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Excursion Shuttle"
 
-// Heist
-/obj/machinery/computer/shuttle_control/web/heist
-	name = "skipjack control console"
-	req_access = list(access_syndicate)
-	shuttle_tag = "Skipjack"
-
-/datum/shuttle/autodock/web_shuttle/heist
-	name = "Skipjack"
-	current_location = "skipjack_base"
-	shuttle_area = /area/shuttle/skipjack
-	web_master_type = /datum/shuttle_web_master/heist
-	warmup_time = 0
-	can_cloak = TRUE
-	cloaked = TRUE
-
-/datum/shuttle_web_master/heist
-	destination_class = /datum/shuttle_destination/heist
-	starting_destination = /datum/shuttle_destination/heist/root
-
-/datum/shuttle_destination/heist/root
-	name = "Raider Outpost"
-	my_landmark = "skipjack_base"
-	preferred_interim_tag = "skipjack_transit"
-
-	routes_to_make = list(
-		/datum/shuttle_destination/heist/outside_tether = 1 MINUTE
-	)
-
-/datum/shuttle_destination/heist/outside_tether
-	name = "NSB Adephagia - Nearby"
-	my_landmark = "skipjack_outside"
-	preferred_interim_tag = "skipjack_transit"
-
-	routes_to_make = list(
-		/datum/shuttle_destination/heist/root = 1 MINUTE,
-		/datum/shuttle_destination/heist/docked_tether = 0
-	)
-
-/datum/shuttle_destination/heist/docked_tether
-	name = "NSB Adephagia - Dockarm"
-	my_landmark = "tether_dockarm_d1l"
-
-	routes_to_make = list(
-		/datum/shuttle_destination/heist/outside_tether = 0
-	)
-
-// Ninja
-/obj/machinery/computer/shuttle_control/web/ninja
-	name = "stealth shuttle control console"
-	req_access = list(access_syndicate)
-	shuttle_tag = "Ninja"
-
-/datum/shuttle/autodock/web_shuttle/ninja
-	name = "Ninja"
-	visible_name = "Unknown Vessel"
-	current_location = "ninja_base"
-	shuttle_area = /area/shuttle/ninja
-	docking_controller_tag = "ninja_shuttle"
-	web_master_type = /datum/shuttle_web_master/ninja
-	warmup_time = 0
-	can_cloak = TRUE
-	cloaked = TRUE
-
-/datum/shuttle_web_master/ninja
-	destination_class = /datum/shuttle_destination/ninja
-	starting_destination = /datum/shuttle_destination/ninja/root
-
-/datum/shuttle_destination/ninja/root
-	name = "Dojo Outpost"
-	my_landmark = "ninja_base"
-	preferred_interim_tag = "ninja_transit"
-
-	routes_to_make = list(
-		/datum/shuttle_destination/ninja/outside_tether = 30 SECONDS
-	)
-
-/datum/shuttle_destination/ninja/outside_tether
-	name = "NSB Adephagia - Nearby"
-	my_landmark = "tether_space_NE"
-	preferred_interim_tag = "ninja_transit"
-
-	routes_to_make = list(
-		/datum/shuttle_destination/ninja/root = 30 SECONDS,
-		/datum/shuttle_destination/ninja/docked_tether = 0
-	)
-
-/datum/shuttle_destination/ninja/docked_tether
-	name = "NSB Adephagia - Dockarm"
-	my_landmark = "tether_dockarm_d1a3"
-
-	routes_to_make = list(
-		/datum/shuttle_destination/ninja/outside_tether = 0
-	)
-
-
-////////////////////////////////////
-//////// Specops Shuttle ///////////
-////////////////////////////////////
-
-/obj/machinery/computer/shuttle_control/web/specialops
-	name = "shuttle control console"
-	shuttle_tag = "Special Operations Shuttle"
-	req_access = list()
-	req_one_access = list(access_cent_specops)
-
-/datum/shuttle/autodock/web_shuttle/specialops
-	name = "Special Operations Shuttle"
-	visible_name = "NDV Phantom"
-	current_location = "specops_base"
-	shuttle_area = /area/shuttle/specialops
-	docking_controller_tag = "specops_shuttle_hatch"
-	web_master_type = /datum/shuttle_web_master/specialops
-	can_rename = FALSE
-	can_cloak = TRUE
-	cloaked = FALSE
-
-/datum/shuttle_web_master/specialops
-	destination_class = /datum/shuttle_destination/specialops
-	starting_destination = /datum/shuttle_destination/specialops/centcom
-
-/datum/shuttle_destination/specialops/tether
-	name = "NSB Adephagia Docking Arm 2"
-	my_landmark = "tether_dockarm_d2a2"
-	preferred_interim_tag = "specops_transit"
-
-	radio_announce = 1
-	announcer = "A.L.I.C.E."
-
-	routes_to_make = list(
-		/datum/shuttle_destination/specialops/centcom = 15
-	)
-
-/datum/shuttle_destination/specialops/tether/get_arrival_message()
-	return "Attention, [master.my_shuttle.visible_name] has arrived at the Docking Arm 2."
-
-/datum/shuttle_destination/specialops/tether/get_departure_message()
-	return "Attention, [master.my_shuttle.visible_name] has departed from the Docking Arm 2."
-
-
-/datum/shuttle_destination/specialops/centcom
-	name = "Central Command"
-	my_landmark = "specops_base"
-	preferred_interim_tag = "specops_transit"
-
-	routes_to_make = list(
-		/datum/shuttle_destination/specialops/tether = 15
-	)

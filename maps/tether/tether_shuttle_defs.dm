@@ -36,14 +36,20 @@
 
 //////////////////////////////////////////////////////////////
 // Trade Ship
-/datum/shuttle/autodock/ferry/trade
+/datum/shuttle/autodock/multi/trade
 	name = "Trade"
-	location = FERRY_LOCATION_OFFSITE
+	current_location = "trade_dock"
 	shuttle_area = /area/shuttle/trade
-	warmup_time = 10	//want some warmup time so people can cancel.
-	landmark_offsite = "trade_cc"
-	landmark_station = "tether_dockarm_d1l"
 	docking_controller_tag = "trade_shuttle"
+	warmup_time = 10	//want some warmup time so people can cancel.
+	destination_tags = list(
+		"trade_dock",
+		"tether_dockarm_d1l",
+		"aerostat_south",
+		"beach_e",
+		"beach_c",
+		"beach_nw"
+	)
 
 //////////////////////////////////////////////////////////////
 // Tether Shuttle
@@ -60,38 +66,6 @@
 	docking_controller_tag = "tether_shuttle"
 
 //////////////////////////////////////////////////////////////
-// Antag Space "Proto Shuttle" Shuttle
-/datum/shuttle/autodock/multi/protoshuttle
-	name = "Proto"
-	warmup_time = 8
-	move_time = 60
-	current_location = "antag_space_base"
-	shuttle_area = /area/shuttle/antag_space
-	landmark_transition = "antag_space_transit"
-	destination_tags = list(
-		"tether_space_NE",
-		"tether_space_SE",
-		"tether_space_SW",
-		"tether_dockarm_d2a1"
-	)
-	docking_controller_tag = "antag_space_shuttle"
-
-//////////////////////////////////////////////////////////////
-// Antag Surface "Land Crawler" Shuttle
-/datum/shuttle/autodock/multi/landcrawler
-	name = "Land Crawler"
-	warmup_time = 8
-	move_time = 60
-	current_location = "antag_ground_base"
-	shuttle_area = /area/shuttle/antag_ground
-	landmark_transition = "antag_ground_transit"
-	destination_tags = list(
-		"antag_ground_solars",
-		"antag_ground_mining"
-	)
-	docking_controller_tag = "antag_ground_shuttle"
-
-//////////////////////////////////////////////////////////////
 // Mercenary Shuttle
 /datum/shuttle/autodock/multi/mercenary
 	name = "Mercenary"
@@ -101,19 +75,109 @@
 	shuttle_area = /area/shuttle/mercenary
 	destination_tags = list(
 		"merc_base",
-		"merc_tether_solars",
+		"aerostat_south",
+		"beach_e",
+		"beach_nw",
+		"tether_solars_ne",
+		"tether_solars_sw",
+		"tether_mine_nw",
 		"tether_space_NE",
 		"tether_space_SE",
 		"tether_space_SW",
-		"tether_dockarm_d2l"
+		"tether_dockarm_d2l" //End of right docking arm
 		)
 	docking_controller_tag = "merc_shuttle"
 	announcer = "Automated Traffic Control"
-
-/datum/shuttle/autodock/multi/mercenary/New()
 	arrival_message = "Attention. An unregistered vessel is approaching Virgo-3B."
 	departure_message = "Attention. A unregistered vessel is now leaving Virgo-3B."
-	..()
+
+
+//////////////////////////////////////////////////////////////
+// Ninja Shuttle
+/datum/shuttle/autodock/multi/ninja
+	name = "Ninja"
+	warmup_time = 8
+	move_time = 60
+	can_cloak = TRUE
+	cloaked = TRUE
+	current_location = "ninja_base"
+	landmark_transition = "ninja_transit"
+	shuttle_area = /area/shuttle/ninja
+	destination_tags = list(
+		"ninja_base",
+		"aerostat_northeast",
+		"beach_e",
+		"beach_nw",
+		"tether_solars_ne",
+		"tether_solars_sw",
+		"tether_mine_nw",
+		"tether_space_NE",
+		"tether_space_SE",
+		"tether_space_SW",
+		"tether_dockarm_d1a3" //Inside of left dockarm
+		)
+	docking_controller_tag = "ninja_shuttle"
+	announcer = "Automated Traffic Control"
+	arrival_message = "Attention. An unregistered vessel is approaching Virgo-3B."
+	departure_message = "Attention. A unregistered vessel is now leaving Virgo-3B."
+
+//////////////////////////////////////////////////////////////
+// Skipjack
+/datum/shuttle/autodock/multi/heist
+	name = "Skipjack"
+	warmup_time = 8
+	move_time = 60
+	can_cloak = TRUE
+	cloaked = TRUE
+	current_location = "skipjack_base"
+	landmark_transition = "skipjack_transit"
+	shuttle_area = /area/shuttle/skipjack
+	destination_tags = list(
+		"skipjack_base",
+		"aerostat_south",
+		"beach_e",
+		"beach_nw",
+		"tether_solars_ne",
+		"tether_solars_sw",
+		"tether_mine_nw",
+		"tether_space_NE",
+		"tether_space_SE",
+		"tether_space_SW",
+		"tether_dockarm_d1l" //End of left dockarm
+		)
+	//docking_controller_tag = ??? doesn't have one?
+	announcer = "Automated Traffic Control"
+	arrival_message = "Attention. An unregistered vessel is approaching Virgo-3B."
+	departure_message = "Attention. A unregistered vessel is now leaving Virgo-3B."
+
+//////////////////////////////////////////////////////////////
+// ERT Shuttle
+/datum/shuttle/autodock/multi/specialops
+	name = "NDV Phantom"
+	can_cloak = TRUE
+	cloaked = FALSE
+	warmup_time = 8
+	move_time = 60
+	current_location = "specops_base"
+	landmark_transition = "specops_transit"
+	shuttle_area = /area/shuttle/specialops
+	destination_tags = list(
+		"specops_base",
+		"aerostat_northwest",
+		"beach_e",
+		"beach_nw",
+		"tether_solars_ne",
+		"tether_solars_sw",
+		"tether_mine_nw",
+		"tether_space_NE",
+		"tether_space_SE",
+		"tether_space_SW",
+		"tether_dockarm_d2a2" //Top of right docking arm
+		)
+	docking_controller_tag = "specops_shuttle_hatch"
+	announcer = "Automated Traffic Control"
+	arrival_message = "Attention. An NT support vessel is approaching Virgo-3B."
+	departure_message = "Attention. A NT support vessel is now leaving Virgo-3B."
 
 //////////////////////////////////////////////////////////////
 // RogueMiner "Belter: Shuttle

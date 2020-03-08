@@ -312,7 +312,7 @@
 	base_area = /area/tether_away/beach/jungle;
 	base_turf = /turf/simulated/floor/beach/sand/desert;
 	landmark_tag = "tether_excursion_beach";
-	name = "Excursion Beach"
+	name = "Beach Area (Center)"
 	},
 /turf/simulated/floor/beach/sand/desert,
 /area/tether_away/beach/jungle)
@@ -331,12 +331,24 @@
 /turf/simulated/floor/beach/sand,
 /area/tether_away/beach/jungle)
 "bs" = (
-/obj/effect/overmap/visitable/sector/virgo4,
 /obj/effect/step_trigger/zlevel_fall/beach,
 /turf/simulated/floor/beach/sand/desert,
 /area/tether_away/beach/jungle)
 "xW" = (
 /obj/tether_away_spawner/beach_outside_friendly,
+/turf/simulated/floor/beach/sand/desert,
+/area/tether_away/beach/jungle)
+"zg" = (
+/obj/effect/overmap/visitable/sector/virgo4,
+/turf/simulated/floor/water/deep/ocean,
+/area/tether_away/beach/water)
+"LC" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/tether_away/beach/jungle;
+	base_turf = /turf/simulated/floor/beach/sand/desert;
+	landmark_tag = "tether_excursion_beach3";
+	name = "Beach Area (Northwest)"
+	},
 /turf/simulated/floor/beach/sand/desert,
 /area/tether_away/beach/jungle)
 "TU" = (
@@ -347,6 +359,15 @@
 /obj/tether_away_spawner/beach_outside_friendly,
 /turf/simulated/floor/beach/sand,
 /area/tether_away/beach)
+"ZO" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/tether_away/beach/jungle;
+	base_turf = /turf/simulated/floor/beach/sand/desert;
+	landmark_tag = "tether_excursion_beach2";
+	name = "Beach Area (East)"
+	},
+/turf/simulated/floor/beach/sand/desert,
+/area/tether_away/beach/jungle)
 
 (1,1,1) = {"
 bl
@@ -629,7 +650,7 @@ am
 am
 am
 am
-am
+zg
 bi
 "}
 (3,1,1) = {"
@@ -2639,7 +2660,7 @@ aa
 aa
 aa
 aa
-ac
+aa
 aa
 aa
 aa
@@ -3495,7 +3516,7 @@ aa
 aa
 aa
 aa
-aa
+LC
 aa
 aa
 aa
@@ -18732,7 +18753,7 @@ aa
 aa
 aa
 aa
-aa
+ZO
 aa
 aa
 aa

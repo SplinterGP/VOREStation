@@ -6,6 +6,7 @@
 	var/range = 0	//how many overmap tiles can shuttle go, for picking destinations and returning.
 	var/fuel_consumption = 0 //Amount of moles of gas consumed per trip; If zero, then shuttle is magic and does not need fuel
 	var/list/obj/structure/fuel_port/fuel_ports //the fuel ports of the shuttle (but usually just one)
+	var/obj/effect/overmap/visitable/ship/landable/myship //my overmap ship object
 
 	category = /datum/shuttle/autodock/overmap
 	var/skill_needed = SKILL_BASIC
@@ -14,6 +15,10 @@
 /datum/shuttle/autodock/overmap/New(var/_name, var/obj/effect/shuttle_landmark/start_waypoint)
 	..(_name, start_waypoint)
 	refresh_fuel_ports_list()
+
+/datum/shuttle/autodock/overmap/Destroy()
+	. = ..()
+	myship = null
 
 /datum/shuttle/autodock/overmap/proc/refresh_fuel_ports_list() //loop through all
 	fuel_ports = list()
@@ -36,7 +41,10 @@
 		return FALSE
 	if(moving_status == SHUTTLE_INTRANSIT)
 		return FALSE //already going somewhere, current_location may be an intransit location instead of in a sector
-	return get_dist(waypoint_sector(current_location), waypoint_sector(next_location)) <= range
+	var/our_sector = waypoint_sector(current_location)
+	if(!our_sector && myship?.landmark && next_location == myship.landmark)
+		return TRUE //We're not on the overmap yet (admin spawned probably), and we're trying to hook up with our openspace sector
+	return get_dist(our_sector, waypoint_sector(next_location)) <= range
 
 /datum/shuttle/autodock/overmap/can_launch()
 	return ..() && can_go()
@@ -62,11 +70,15 @@
 
 /datum/shuttle/autodock/overmap/proc/get_possible_destinations()
 	var/list/res = list()
-	for (var/obj/effect/overmap/visitable/S in range(get_turf(waypoint_sector(current_location)), range))
+	var/our_sector = waypoint_sector(current_location)
+	if(!our_sector && myship?.landmark)
+		res["Perform Test Jump"] = myship.landmark
+		return res //We're not on the overmap, maybe an admin spawned us on a non-sector map. We're broken until we connect to our space z-level.
+	for (var/obj/effect/overmap/visitable/S in range(get_turf(our_sector), range))
 		var/list/waypoints = S.get_waypoints(name)
 		for(var/obj/effect/shuttle_landmark/LZ in waypoints)
 			if(LZ.is_valid(src))
-				res["[waypoints[LZ]] - [LZ.name]"] = LZ
+				res["[waypoints[LZ]] - [LZ.name]"] = LZ	
 	return res
 
 /datum/shuttle/autodock/overmap/get_location_name()

@@ -6971,7 +6971,7 @@
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 8
 	},
-/obj/effect/shuttle_landmark/transit{
+/obj/effect/shuttle_landmark{
 	base_area = /area/tether/exploration;
 	base_turf = /turf/simulated/floor/reinforced;
 	docking_controller = "expshuttle_dock";

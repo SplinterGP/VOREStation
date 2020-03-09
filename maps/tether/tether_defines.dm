@@ -38,6 +38,8 @@
 	path = "tether"
 
 	use_overmap = TRUE
+	overmap_z = Z_LEVEL_MISC
+	overmap_size = 20
 
 	zlevel_datum_type = /datum/map_z_level/tether
 

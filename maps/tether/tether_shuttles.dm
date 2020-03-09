@@ -185,28 +185,6 @@
 ////////////////////////////////////////
 //////// Excursion Shuttle /////////////
 ////////////////////////////////////////
-/obj/effect/overmap/visitable/sector/virgo3b
-	name = "Virgo 3B"
-	desc = "Full of phoron, and home to the NSB Adephagia, where you can dock and refuel your craft."
-	base = 1
-	start_x = 10
-	start_y = 10
-	icon_state = "globe"
-	color = "#d35b5b"
-	initial_generic_waypoints = list(
-		"tether_dockarm_d1a1", //Bottom left,
-		"tether_dockarm_d1a2", //Top left,
-		"tether_dockarm_d1a3", //Left on inside,
-		"tether_dockarm_d2a1", //Bottom right,
-		"tether_dockarm_d2a2", //Top right,
-		"tether_dockarm_d1l", //End of left arm,
-		"tether_dockarm_d2l", //End of right arm,
-		"tether_space_SE", //station1, bottom right of space,
-		"tether_space_NE", //station1, top right of space,
-		"tether_space_SW", //station3, bottom left of space,
-
-		)
-
 // The 'shuttle' of the excursion shuttle
 /datum/shuttle/autodock/overmap/excursion
 	name = "Excursion Shuttle"

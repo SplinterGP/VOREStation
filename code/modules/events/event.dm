@@ -50,7 +50,9 @@
 	var/startedAt			= 0 //When this event started.
 	var/endedAt				= 0 //When this event ended.
 	var/processing_active 	= TRUE
+	var/list/affecting_z = null //zlevels that this event is affecting
 	var/datum/event_meta/event_meta = null
+	var/has_skybox_image
 
 /datum/event/nothing
 

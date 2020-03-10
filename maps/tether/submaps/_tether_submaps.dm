@@ -445,3 +445,4 @@
 //Overmap ship spawns
 
 #include "om_ships/hybridshuttle.dm"
+#include "om_ships/screebarge.dm"

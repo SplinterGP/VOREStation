@@ -16,6 +16,12 @@
 	icon_state = "shuttle2"
 	requires_power = 1
 
+// The shuttle's 'shuttle' computer
+/obj/machinery/computer/shuttle_control/explore/hybridshuttle
+	name = "short jump console"
+	shuttle_tag = "XN-29 Prototype Shuttle"
+	req_one_access = list(access_pilot)
+
 // A shuttle lateloader landmark
 /obj/effect/shuttle_landmark/shuttle_initializer/hybridshuttle
 	name = "Origin - Hybrid Shuttle"

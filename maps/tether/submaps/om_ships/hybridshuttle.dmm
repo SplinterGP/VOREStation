@@ -493,7 +493,8 @@
 "bj" = (
 /obj/machinery/door/airlock/alien/blue{
 	frequency = 1380;
-	id_tag = "hybrid_shuttle_afts"
+	id_tag = "hybrid_shuttle_afts";
+	req_one_access = list(19,43,67)
 	},
 /obj/structure/fans/hardlight,
 /turf/simulated/floor/tiled/techfloor,
@@ -512,17 +513,19 @@
 "bl" = (
 /obj/structure/table/alien/blue,
 /obj/machinery/button/remote/airlock{
+	id = "hybrid_shuttle_afts";
 	name = "Aft Door Bolts";
 	pixel_x = 6;
 	pixel_y = 2;
-	id = "hybrid_shuttle_afts";
+	req_one_access = list(19,43,67);
 	specialfunctions = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "hybrid_shuttle_docker";
 	pixel_x = -6;
 	pixel_y = 0;
-	id_tag = "hybrid_shuttle_docker";
-	frequency = 1380;
+	req_one_access = list(19,43,67);
 	tag_door = "hybrid_shuttle_afts"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -616,9 +619,7 @@
 /turf/simulated/shuttle/floor/alienplating/blue/half,
 /area/shuttle/blue_fo)
 "by" = (
-/obj/machinery/computer/shuttle_control/explore{
-	shuttle_tag = "XN-29 Prototype Shuttle"
-	},
+/obj/machinery/computer/shuttle_control/explore/hybridshuttle,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/blue_fo)
 "bz" = (

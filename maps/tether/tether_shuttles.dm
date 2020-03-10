@@ -32,11 +32,6 @@
 	shuttle_tag = "Trade"
 	req_one_access = list(access_trader)
 
-/obj/machinery/computer/shuttle_control/cruiser_shuttle
-	name = "cruiser shuttle control console"
-	shuttle_tag = "Cruiser Shuttle"
-	req_one_access = list(access_heads)
-
 //
 // "Tram" Emergency Shuttler
 // Becuase the tram only has its own doors and no corresponding station doors, a docking controller is overkill.
@@ -182,6 +177,7 @@
 	update_icon()
 	return 1
 */
+
 ////////////////////////////////////////
 //////// Excursion Shuttle /////////////
 ////////////////////////////////////////
@@ -191,14 +187,42 @@
 	warmup_time = 0
 	current_location = "tether_excursion_hangar"
 	docking_controller_tag = "expshuttle_docker"
-	shuttle_area = /area/shuttle/excursion
-	fuel_consumption = 0 //WIP
+	shuttle_area = list(/area/shuttle/excursion/cockpit, /area/shuttle/excursion/general, /area/shuttle/excursion/cargo)
+	fuel_consumption = 3
 
 // The 'ship' of the excursion shuttle
 /obj/effect/overmap/visitable/ship/landable/excursion
 	name = "Excursion Shuttle"
 	desc = "The traditional Excursion Shuttle. NT Approved!"
-	vessel_mass = 5000
+	vessel_mass = 10000
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Excursion Shuttle"
 
+/obj/machinery/computer/shuttle_control/explore/excursion
+	name = "short jump console"
+	shuttle_tag = "Excursion Shuttle"
+	req_one_access = list(access_pilot)
+
+////////////////////////////////////////
+////////      Tour Bus     /////////////
+////////////////////////////////////////
+/datum/shuttle/autodock/overmap/tourbus
+	name = "Tour Bus"
+	warmup_time = 0
+	current_location = "tourbus_dock"
+	docking_controller_tag = "tourbus_docker"
+	shuttle_area = list(/area/shuttle/tourbus/cockpit, /area/shuttle/tourbus/general, /area/shuttle/tourbus/engines)
+	fuel_consumption = 1
+
+// The 'ship' of the excursion shuttle
+/obj/effect/overmap/visitable/ship/landable/tourbus
+	name = "Tour Bus"
+	desc = "A small 'space bus', if you will."
+	vessel_mass = 2000
+	vessel_size = SHIP_SIZE_SMALL
+	shuttle = "Tour Bus"
+
+/obj/machinery/computer/shuttle_control/explore/tourbus
+	name = "short jump console"
+	shuttle_tag = "Tour Bus"
+	req_one_access = list(access_pilot)

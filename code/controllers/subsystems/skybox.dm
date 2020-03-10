@@ -4,21 +4,12 @@ SUBSYSTEM_DEF(skybox)
 	name = "Space skybox"
 	init_order = INIT_ORDER_SKYBOX
 	flags = SS_NO_FIRE
-	var/background_color
-	var/skybox_icon = 'icons/skybox/skybox.dmi' //Path to our background. Lets us use anything we damn well please. Skyboxes need to be 736x736
-	var/background_icon = "dyable"
-	var/use_stars = TRUE
-	var/use_overmap_details = TRUE
-	var/star_path = 'icons/skybox/skybox.dmi'
-	var/star_state = "stars"
 	var/list/skybox_cache = list()
 
 /datum/controller/subsystem/skybox/Initialize()
 	. = ..()
-	background_color = rgb(rand(0,255), rand(0,255), rand(0,255))
 
 /datum/controller/subsystem/skybox/Recover()
-	background_color = SSskybox.background_color
 	skybox_cache = SSskybox.skybox_cache
 
 /datum/controller/subsystem/skybox/proc/get_skybox(z)
@@ -32,23 +23,25 @@ SUBSYSTEM_DEF(skybox)
 	return skybox_cache["[z]"]
 
 /datum/controller/subsystem/skybox/proc/generate_skybox(z)
-	var/image/res = image(skybox_icon)
+	var/datum/skybox_settings/settings = global.using_map.get_skybox_datum(z)
+
+	var/image/res = image(settings.icon)
 	res.appearance_flags = KEEP_TOGETHER
 
-	var/image/base = image(skybox_icon, background_icon)
+	var/image/base = image(settings.icon, settings.icon_state)
 	//base.color = background_color
 
-	if(use_stars)
-		var/image/stars = image(skybox_icon, star_state)
+	if(settings.use_stars)
+		var/image/stars = image(settings.icon, settings.star_state)
 		stars.appearance_flags = RESET_COLOR
 		base.overlays += stars
 
 	res.overlays += base
 
-	if(global.using_map.use_overmap && use_overmap_details)
+	if(global.using_map.use_overmap && settings.use_overmap_details)
 		var/obj/effect/overmap/visitable/O = map_sectors["[z]"]
 		if(istype(O))
-			var/image/overmap = image(skybox_icon)
+			var/image/overmap = image(settings.icon_state)
 			overmap.overlays += O.generate_skybox()
 			for(var/obj/effect/overmap/visitable/other in O.loc)
 				if(other != O)
@@ -70,27 +63,20 @@ SUBSYSTEM_DEF(skybox)
 	for(var/client/C)
 		C.update_skybox(1)
 
-//Update skyboxes. Called by supermatter cascade for now.
-/datum/controller/subsystem/skybox/proc/change_skybox(new_state, new_color, new_use_stars, new_use_overmap_details)
-	var/need_rebuild = FALSE
-	if(new_state != background_icon)
-		background_icon = new_state
-		need_rebuild = TRUE
+// Settings datum that maps can override to play with their skyboxes
+/datum/skybox_settings
+	var/icon = 'icons/skybox/skybox.dmi' //Path to our background. Lets us use anything we damn well please. Skyboxes need to be 736x736
+	var/icon_state = "dyable"
+	var/color
+	var/random_color = FALSE
+	
+	var/use_stars = TRUE
+	var/star_icon = 'icons/skybox/skybox.dmi'
+	var/star_state = "stars"
 
-	if(new_color != background_color)
-		background_color = new_color
-		need_rebuild = TRUE
+	var/use_overmap_details = TRUE //Do we try to draw overmap visitables in our sector on the map?
 
-	if(new_use_stars != use_stars)
-		use_stars = new_use_stars
-		need_rebuild = TRUE
-
-	if(new_use_overmap_details != use_overmap_details)
-		use_overmap_details = new_use_overmap_details
-		need_rebuild = TRUE
-
-	if(need_rebuild)
-		skybox_cache.Cut()
-
-		for(var/client/C)
-			C.update_skybox(1)
+/datum/skybox_settings/New()
+	..()
+	if(random_color)
+		color = rgb(rand(0,255), rand(0,255), rand(0,255))

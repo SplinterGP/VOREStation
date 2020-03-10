@@ -111,6 +111,8 @@
 
 	meteor_strike_areas = list(/area/tether/surfacebase/outside/outside3)
 
+	default_skybox = /datum/skybox_settings/tether
+
 	unit_test_exempt_areas = list(
 		/area/tether/surfacebase/outside/outside1,
 		/area/tether/elevator,
@@ -184,6 +186,10 @@
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_SOLARS, 64, 64)         // Create the mining ore distribution map.
 
 	return 1
+
+/datum/skybox_settings/tether
+	icon_state = "space5"
+	use_stars = FALSE
 
 /datum/planet/virgo3b
 	expected_z_levels = list(
@@ -329,4 +335,3 @@
 	z = Z_LEVEL_MISC
 	name = "Misc"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_XENOARCH_EXEMPT
-

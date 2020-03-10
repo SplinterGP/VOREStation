@@ -23,8 +23,8 @@
 
 /turf/space/Initialize()
 	. = ..()
-	// if(!keep_sprite)
-	// 	icon_state = "[((x + y) ^ ~(x * y) + z) % 25]"
+	if(!keep_sprite)
+		icon_state = "white"
 	update_starlight()
 	if (!dust_cache)
 		build_dust_cache()

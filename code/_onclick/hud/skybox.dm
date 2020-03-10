@@ -6,7 +6,7 @@
 	simulated = FALSE
 	screen_loc = "CENTER:-352,CENTER:-352" // (736/2 - 32/2)
 	plane = SKYBOX_PLANE
-	// blend_mode = BLEND_MULTIPLY // Seems like no need.  MULTIPLY on a white background comes out the same anyway.
+	blend_mode = BLEND_MULTIPLY // You actually need to do it this way or you see it in occlusion.
 
 /client
 	var/obj/skybox/skybox
@@ -14,7 +14,7 @@
 /client/proc/update_skybox(rebuild)
 	if(!skybox)
 		skybox = new()
-		//screen += skybox
+		screen += skybox
 		rebuild = 1
 
 	var/turf/T = get_turf(eye)
@@ -22,7 +22,7 @@
 		if(rebuild)
 			skybox.overlays.Cut()
 			skybox.overlays += SSskybox.get_skybox(T.z)
-			//screen |= skybox
+			screen |= skybox
 		skybox.screen_loc = "CENTER:[-352 + (world.maxx>>1) - T.x],CENTER:[-352 + (world.maxy>>1) - T.y]"
 
 /mob/Login()

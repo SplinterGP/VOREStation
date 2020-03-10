@@ -136,7 +136,7 @@
 
 /obj/structure/fuel_port/Initialize()
 	. = ..()
-	new /obj/item/weapon/tank/hydrogen(src)
+	new /obj/item/weapon/tank/phoron(src)
 
 /obj/structure/fuel_port/attack_hand(mob/user as mob)
 	if(!opened)

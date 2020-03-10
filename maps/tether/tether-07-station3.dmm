@@ -17025,11 +17025,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
-"An" = (
-/obj/machinery/ion_engine,
-/turf/simulated/floor/reinforced,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/excursion/cargo)
 "Ao" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -42138,8 +42133,8 @@ Xa
 jZ
 WR
 Xo
-XN
-An
+iY
+Wp
 cK
 ms
 Xq
@@ -42706,8 +42701,8 @@ iY
 XS
 kx
 Wp
-XN
-An
+iY
+Wp
 cK
 ms
 mq
